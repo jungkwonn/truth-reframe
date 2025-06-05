@@ -14,6 +14,43 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <style>
+/* 더 나은 텍스트 줄 바꿈을 위한 규칙 추가 */
+.mol-result-summary__description,
+.org-result-details__title, /* 결과 화면의 질문 텍스트 */
+.org-result-details__explanation,
+.mol-strategy-card li,
+.mol-tip-box li,
+.mol-modal-content p,
+.mol-modal-content li,
+.mol-modal-content .example-box, /* 예시 박스 안의 텍스트 */
+.mol-modal-content blockquote p,
+#intro-card .intro-text p {
+  overflow-wrap: break-word; /* 단어가 너무 길 경우 줄바꿈 허용 */
+  word-break: keep-all; /* 한국어의 경우, 단어 단위(띄어쓰기)로 줄바꿈 (권장) */
+                         /* 만약 keep-all을 사용해도 매우 좁은 컨테이너에서 긴 '단어' 때문에 오버플로우가 발생한다면, */
+                         /* word-break: break-word; 사용을 고려하세요. */
+}
+
+/* keep-all이 특정 상황에서 너무 제한적일 경우를 대비한 강제 줄바꿈. */
+/* 이 규칙이 단어를 너무 자주 부자연스럽게 자른다면 좀 더 선택적으로 적용해야 합니다. */
+/* 예를 들어, @media (max-width: 768px) 블록 내부나 더 좁은 화면 조건에만 적용하세요. */
+@media (max-width: 480px) { /* 매우 좁은 화면을 위한 예시 */
+  .mol-result-summary__description,
+  .org-result-details__title,
+  .org-result-details__explanation,
+  .mol-strategy-card li,
+  .mol-tip-box li,
+  .mol-modal-content p,
+  .mol-modal-content li {
+    word-break: break-word; /* 필요하다면 매우 작은 화면에서 더 적극적인 단어 줄바꿈 적용 */
+  }
+}
+
+/* 이미지나 다른 임베디드 콘텐츠가 컨테이너를 벗어나지 않도록 합니다. */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
 :root {
   --color-primary: #3B82F6; 
   --color-primary-dark: #2563EB;
@@ -692,6 +729,8 @@ input[type="radio"]:checked + .atm-option-label .atm-option-label__description {
 
 #start-btn { font-size: 1.1rem; padding: var(--space-md) var(--space-lg); } 
 #prev-btn, #next-btn { font-size: 1.1rem; padding: var(--space-md) var(--space-lg); } 
+
+
 </style>
 </head>
 <body>
