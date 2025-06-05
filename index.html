@@ -719,46 +719,181 @@ input[type="radio"]:checked + .atm-option-label .atm-option-label__description {
 .table-responsive { width: 100%; overflow-x: auto; margin: var(--space-md) 0; }
 .mol-modal-content .table-responsive table { width: 100%; border-collapse: collapse; }
 
-/* ▼▼▼ 여기에 아래의 새로운 모바일 여백 조정 규칙들을 추가하세요 ▼▼▼ */
-
-  /* 1. 가장 바깥쪽 콘텐츠 영역의 좌우 여백 줄이기 (더 넓게 쓰고 싶을 경우) */
+ /* 1. 가장 바깥쪽 콘텐츠 영역: 화면 가장자리 최소 여백 설정 */
   .layout-container {
-    padding-left: 5px;  /* 기존 var(--space-md)는 약 16px입니다. 10px 정도로 줄여봅니다. */
-    padding-right: 5px; /* 필요에 따라 8px 등 더 작은 값으로 조절 가능합니다. */
+    padding-left: 10px !important; /* 현재 파일에 적용된 값 유지 또는 5px~10px 사이로 조절 */
+    padding-right: 10px !important;
   }
 
-  /* 2. 카드 내부 콘텐츠 영역(atm-card__body)의 좌우 여백 줄이기 */
-  /* 이 부분이 "진짜 일어난 일' vs 내 머릿속 생각" 섹션 같은 곳에 영향을 줍니다. */
-  .atm-card__body {
-    padding-top: var(--space-md);    /* 상하 여백은 기존대로 두거나 var(--space-sm) 등으로 줄일 수 있습니다. */
-    padding-bottom: var(--space-md);
-    padding-left: 6px;  /* 기존 var(--space-lg)는 약 24px입니다. 12px 정도로 줄여봅니다. */
-    padding-right: 6px; /* 이 값을 조절하면서 화면을 확인해보세요. */
+  /* 2. 소개 카드(#intro-card) 내부 여백: 이 너비를 결과 화면의 기준으로 삼습니다. */
+  #intro-card .atm-card__body {
+    padding-left: 12px !important; /* 현재 파일에 적용된 값 유지 또는 10px~15px 사이로 조절 */
+    padding-right: 12px !important;
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important;
+    border: none !important; /* 혹시 있을 수 있는 테두리 제거 */
+    box-shadow: none !important; /* 그림자 제거 */
+  }
+  #intro-card .info-box { /* 소개 카드 내 정보 박스도 유사하게 */
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    border-left: none !important; /* 왼쪽 파란색 줄 제거 */
+    box-shadow: none !important;
+    background-color: var(--color-primary-lighter) !important; /* 배경색은 유지 */
   }
 
-  /* 3. "이 테스트를 통해 얻을 수 있는 선물!" 박스(.info-box)의 좌우 여백 줄이기 */
-  #intro-card .info-box {
-    padding-top: var(--space-sm);
-    padding-bottom: var(--space-sm);
-    padding-left: 6px;   /* 기존 var(--space-lg)는 약 24px입니다. 12px 정도로 줄여봅니다. */
-    padding-right: 6px;
-    /* 파란색 세로줄(border-left) 두께도 줄이고 싶다면 아래 주석 해제 후 값 조절 */
-    /* border-left-width: none; */ 
-  }
 
-  /* 4. 질문 카드, 결과 카드 등 다른 주요 콘텐츠 박스의 여백도 유사하게 조절 가능 */
-  #question-card .atm-card__body,
+  /* --- 결과 화면(#result-card-overall) 너비 확장 --- */
+  /* 3. 결과 카드 전체의 내부 여백: 소개 카드와 동일하게 맞춥니다. */
   #result-card-overall .atm-card__body {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 12px !important; /* 소개 카드와 동일한 좌우 여백 */
+    padding-right: 12px !important;
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
-  /* 5. 모달 창 내부 콘텐츠 여백 줄이기 (필요하다면) */
-  .mol-modal-content {
-    padding: var(--space-sm); /* 기존 var(--space-md)에서 더 줄여봅니다. (약 12px) */
+  /* 4. 결과 캡처 영역(#result-capture-area): 이 영역 자체의 추가적인 좌우 여백을 제거합니다. */
+  #result-capture-area {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: var(--space-sm) !important; /* 상하 최소 여백 */
+    padding-bottom: var(--space-sm) !important;
   }
 
-  /* ▲▲▲ 여기까지 새로운 모바일 여백 조정 규칙들 ▲▲▲ */
+  /* 5. 개별 결과 항목(.org-result-details__item): 내부 좌우 여백 제거, 배경 투명화로 넓어보이게 */
+  .org-result-details__item {
+    padding-left: 0 !important;   /* 이 항목 자체의 좌우 여백은 0으로 */
+    padding-right: 0 !important;
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important;
+    border: none !important;      /* 테두리 완전 제거 */
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background-color: transparent !important; /* 배경을 투명하게 하여 부모 배경과 이어지도록 */
+  }
+  /* 개별 결과 항목들 사이에 구분선 추가 */
+  .org-result-details__item:not(:last-child) {
+    border-bottom: 1px solid var(--color-border-light) !important;
+  }
+  /* 개별 결과 항목 내 설명 박스(.org-result-details__explanation)도 좌우 여백 조정 */
+  .org-result-details__explanation {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: var(--space-sm) !important; /* 설명 박스 자체는 약간의 패딩 유지 */
+    padding-right: var(--space-sm) !important;
+    border-left: 3px solid var(--color-primary) !important; /* 왼쪽 강조선은 유지 */
+  }
+
+
+  /* 6. 결과 요약 박스(.mol-result-summary): 좌우 여백 및 테두리 조정 */
+  .mol-result-summary {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important;
+    border-left: none !important; /* 왼쪽 두꺼운 테두리 제거 */
+    border-right: none !important;
+    border-top: none !important; /* 상단 테두리 제거 또는 얇은 선으로 대체 */
+    border-bottom: 1px solid var(--color-border-light) !important; /* 하단 구분선 */
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-left: 0 !important; /* 혹시 모를 좌우 마진 제거 */
+    margin-right: 0 !important;
+  }
+
+  /* 7. 기타 전략/팁 박스들도 유사하게 좌우 여백/테두리 제거 */
+  .mol-strategy-card,
+  .mol-tip-box {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-color: transparent !important; /* 배경 투명화 */
+  }
+  .mol-strategy-card:not(:last-child), /* 구분선 추가 */
+  .mol-tip-box:not(:last-child) {
+    border-bottom: 1px solid var(--color-border-light) !important;
+  }
+  /* 내부 리스트 항목의 왼쪽 숫자/아이콘을 위한 공간은 유지 */
+  .mol-strategy-card li { padding-left: 40px !important; } /* 기존 값 유지 또는 약간 조정 */
+  .mol-tip-box li { padding-left: calc(var(--space-sm) + 5px) !important; } /* 기존 값 유지 또는 약간 조정 */
+
+
+  /* 8. 성찰 영역(.reflection-area) textarea도 화면 폭에 맞게 */
+  .reflection-area {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .reflection-area textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* --- 공유 버튼 문제 해결 --- */
+  .mol-share-buttons {
+    display: flex !important;
+    flex-direction: column !important; /* 버튼들을 세로로 쌓음 */
+    gap: var(--space-sm) !important;   /* 버튼 사이의 수직 간격 */
+    align-items: stretch !important; /* 버튼들이 컨테이너 너비를 꽉 채우도록 함 */
+    margin-top: var(--space-md) !important;
+  }
+
+  .mol-share-buttons .atm-button,
+  #restart-btn { /* 테스트 다시하기 버튼도 동일하게 적용 */
+    width: 100% !important;          /* 각 버튼이 가로로 꽉 차도록 */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important; /* 패딩과 테두리를 너비에 포함 */
+    white-space: normal !important; /* 버튼 내 텍스트가 길 경우 줄바꿈 허용 */
+  }
+
+
+  /* --- 필수: 텍스트 줄 바꿈 및 전체 설정 --- */
+  /* (이전에 제공된 내용과 유사하나, !important 추가 및 선택자 보강) */
+  .mol-result-summary__description,
+  .org-result-details__title,
+  .org-result-details__explanation p, /* 설명 박스 내 p 태그 명시 */
+  .mol-strategy-card li,
+  .mol-tip-box li,
+  .mol-modal-content p,
+  .mol-modal-content li,
+  .mol-modal-content .example-box,
+  .mol-modal-content blockquote p,
+  #intro-card .intro-text p,
+  .page-header__description {
+    overflow-wrap: break-word !important;
+    word-break: keep-all !important; /* 한국어는 단어 단위 줄 바꿈 */
+  }
+
+  @media (max-width: 480px) { /* 더 좁은 화면에서의 예외 처리 */
+    .mol-result-summary__description,
+    .org-result-details__title,
+    .org-result-details__explanation p,
+    .mol-strategy-card li,
+    .mol-tip-box li,
+    .mol-modal-content p,
+    .mol-modal-content li {
+      word-break: break-word !important; /* 필요시 글자 단위 줄바꿈 */
+    }
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
 
 } /* @media (max-width: 768px) 닫는 괄호 */
 
