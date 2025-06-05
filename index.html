@@ -718,6 +718,50 @@ input[type="radio"]:checked + .atm-option-label .atm-option-label__description {
 
 .table-responsive { width: 100%; overflow-x: auto; margin: var(--space-md) 0; }
 .mol-modal-content .table-responsive table { width: 100%; border-collapse: collapse; }
+
+/* ▼▼▼ 여기에 아래의 새로운 모바일 여백 조정 규칙들을 추가하세요 ▼▼▼ */
+
+  /* 1. 가장 바깥쪽 콘텐츠 영역의 좌우 여백 줄이기 (더 넓게 쓰고 싶을 경우) */
+  .layout-container {
+    padding-left: 10px;  /* 기존 var(--space-md)는 약 16px입니다. 10px 정도로 줄여봅니다. */
+    padding-right: 10px; /* 필요에 따라 8px 등 더 작은 값으로 조절 가능합니다. */
+  }
+
+  /* 2. 카드 내부 콘텐츠 영역(atm-card__body)의 좌우 여백 줄이기 */
+  /* 이 부분이 "진짜 일어난 일' vs 내 머릿속 생각" 섹션 같은 곳에 영향을 줍니다. */
+  .atm-card__body {
+    padding-top: var(--space-md);    /* 상하 여백은 기존대로 두거나 var(--space-sm) 등으로 줄일 수 있습니다. */
+    padding-bottom: var(--space-md);
+    padding-left: 12px;  /* 기존 var(--space-lg)는 약 24px입니다. 12px 정도로 줄여봅니다. */
+    padding-right: 12px; /* 이 값을 조절하면서 화면을 확인해보세요. */
+  }
+
+  /* 3. "이 테스트를 통해 얻을 수 있는 선물!" 박스(.info-box)의 좌우 여백 줄이기 */
+  #intro-card .info-box {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    padding-left: 12px;   /* 기존 var(--space-lg)는 약 24px입니다. 12px 정도로 줄여봅니다. */
+    padding-right: 12px;
+    /* 파란색 세로줄(border-left) 두께도 줄이고 싶다면 아래 주석 해제 후 값 조절 */
+    /* border-left-width: 3px; */
+  }
+
+  /* 4. 질문 카드, 결과 카드 등 다른 주요 콘텐츠 박스의 여백도 유사하게 조절 가능 */
+  #question-card .atm-card__body,
+  #result-card-overall .atm-card__body {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* 5. 모달 창 내부 콘텐츠 여백 줄이기 (필요하다면) */
+  .mol-modal-content {
+    padding: var(--space-sm); /* 기존 var(--space-md)에서 더 줄여봅니다. (약 12px) */
+  }
+
+  /* ▲▲▲ 여기까지 새로운 모바일 여백 조정 규칙들 ▲▲▲ */
+
+} /* @media (max-width: 768px) 닫는 괄호 */
+
 @media (min-width: 601px) {
   .mol-modal-content .table-responsive th,
   .mol-modal-content .table-responsive td { white-space: nowrap; }
