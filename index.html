@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="💼 직장 생활, 혹시 '내 생각'에 갇혀 힘든 건 아닐까요? 이 테스트로 사실과 해석을 구분하는 능력을 키워보세요! 동료, 상사, 고객과의 관계가 술술 풀릴 거예요." name="description"/>
+<meta content="사실과 해석, 직장 내 소통, 감정 관리, 대인 관계, 스트레스 해소, 인지 오류, 직장인 심리 테스트, 커뮤니케이션 능력, 공감 능력, 자기 계발, 인터넷 가입, 고객 상담, 협력업체" name="keywords"/>
+<meta content="공감 컨설팅" name="author"/>
+<title>💼 직장인 마음 정리 스킬 UP! - 사실 vs 해석 구분 테스트</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<style>
+:root {
+  --color-primary: #3B82F6; 
+  --color-primary-dark: #2563EB;
+  --color-primary-light: #BFDBFE;
+  --color-primary-lighter: #EFF6FF;
+  --color-accent: #10B981; 
+  --color-accent-dark: #059669;
+  --color-accent-light: #A7F3D0;
+  --color-background: #F9FAFB; 
+  --color-surface: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+  --color-text-primary: #1F2937; 
+  --color-text-secondary: #4B5563;
+  --color-text-light: #6B7280;
+  --color-text-on-primary: #FFFFFF;
+  --color-text-disabled: #9CA3AF;
+  --color-success-bg: #ECFDF5;
+  --color-success-text: #065F46;
+  --color-success-border: #6EE7B7;
+  --color-warning-bg: #FFFBEB;
+  --color-warning-text: #92400E;
+  --color-warning-border: #FCD34D;
+  --color-danger-bg: #FEF2F2;
+  --color-danger-text: #991B1B;
+  --color-danger-border: #FCA5A5;
+  --color-info-bg: #EFF6FF;
+  --color-info-text: #1E40AF;
+  --color-info-border: #93C5FD;
+
+  --font-family-base: 'Noto Sans KR', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --font-size-md: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 28px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-base: 1.7; 
+  --line-height-heading: 1.4;
+
+  --space-unit: 4px;
+  --space-xs: calc(var(--space-unit) * 2);
+  --space-sm: calc(var(--space-unit) * 3);
+  --space-md: calc(var(--space-unit) * 4);
+  --space-lg: calc(var(--space-unit) * 6);
+  --space-xl: calc(var(--space-unit) * 8);
+  --space-xxl: calc(var(--space-unit) * 12);
+
+  --border-radius-base: 12px;
+  --border-radius-sm: 6px;
+  --border-radius-lg: 16px;
+  --border-radius-pill: 50px;
+
+  --shadow-soft: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-medium: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-strong: 0 6px 18px rgba(0,0,0,0.08);
+
+  --transition-duration: 0.25s;
+  --transition-timing-function: ease-in-out;
+
+  --fixed-header-height: 60px;
+  --bottom-nav-height-actual: 68px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 100%; }
+body {
+  font-family: var(--font-family-base); font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular); line-height: var(--line-height-base);
+  color: var(--color-text-primary); background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh; display: flex; flex-direction: column;
+  padding-top: 0;
+}
+body.fixed-header-active {
+    padding-top: var(--fixed-header-height);
+}
+
+main { flex-grow: 1; }
+.layout-container { width: 100%; max-width: 800px; margin: 0 auto; padding: var(--space-md); }
+
+.page-header {
+  background-color: var(--color-primary-lighter); padding: var(--space-xl) var(--space-md);
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+.page-header__title {
+  font-size: var(--font-size-xl); font-weight: var(--font-weight-bold);
+  color: var(--color-primary); margin-bottom: var(--space-sm);
+  display: flex; align-items: center; justify-content: center; gap: var(--space-sm);
+}
+.page-header__title .emoji { font-size: 2rem; }
+.page-header__description {
+  font-size: var(--font-size-md); max-width: 700px; margin-left: auto; margin-right: auto;
+  color: var(--color-text-secondary); line-height: 1.8;
+}
+.page-header__description br.mobile-only { display: none; }
+
+.sticky-steps-indicator-wrapper {
+  position: sticky; top: 0; left: 0; width: 100%;
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-sm) 0;
+  z-index: 999;
+  box-shadow: var(--shadow-medium);
+  height: var(--fixed-header-height);
+  display: none;
+  align-items: center;
+}
+.sticky-steps-indicator-wrapper.visible { display: flex; }
+.steps-indicator {
+  display: flex; justify-content: space-around; position: relative;
+  margin: 0 auto; padding: 0 var(--space-md); max-width: 800px; width: 100%;
+}
+.steps-indicator::before {
+  content: ''; position: absolute; top: 15px; left: 10%; width: 80%; height: 2px;
+  background-color: var(--color-border-light); z-index: 1;
+}
+.step {
+  position: relative; z-index: 2; display: flex; flex-direction: column;
+  align-items: center; text-align: center; flex: 1; max-width: 120px;
+}
+.step-icon {
+  width: 32px; height: 32px; border-radius: 50%;
+  background-color: var(--color-surface); border: 2px solid var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: var(--font-weight-semibold); margin-bottom: var(--space-xs);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+  box-shadow: var(--shadow-soft); color: var(--color-text-light);
+}
+.step.active .step-icon {
+  background-color: var(--color-primary); color: var(--color-text-on-primary);
+  border-color: var(--color-primary-dark); transform: scale(1.15); box-shadow: var(--shadow-medium);
+}
+.step.completed .step-icon {
+  background-color: var(--color-accent-dark); border-color: var(--color-accent);
+  color: var(--color-surface);
+}
+.step.completed .step-icon::after { content: '✓'; font-size: 1.2em; }
+.step-label {
+  font-size: var(--font-size-sm); color: var(--color-text-light);
+  transition: all var(--transition-duration) var(--transition-timing-function);
+  line-height: 1.4; word-break: keep-all;
+}
+.step.active .step-label { color: var(--color-primary-dark); font-weight: var(--font-weight-semibold); }
+.step.completed .step-label { color: var(--color-accent-dark); font-weight: var(--font-weight-medium); }
+
+.atm-card {
+  background-color: var(--color-surface); border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--color-border-light);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.atm-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.atm-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+.atm-card__header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex; justify-content: space-between; align-items: center;
+  background-color: var(--color-primary-lighter);
+}
+.atm-card__title {
+  font-size: var(--font-size-md); font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  margin: 0;
+  display: flex; align-items: center; gap: var(--space-sm);
+}
+.atm-card__title .icon { font-size: 1.2em; }
+.atm-card__body { padding: var(--space-lg); }
+
+/* 형광펜 효과 제거 또는 변경 */
+#intro-card .intro-text .highlight,
+.mol-result-summary__description .highlight,
+.mol-strategy-card li .highlight,
+.mol-tip-box li .highlight,
+.mol-modal-content .highlight {
+  padding: 0; 
+  border-radius: 0; 
+  font-weight: var(--font-weight-semibold); 
+  box-shadow: none; 
+  border-bottom: 2px solid var(--color-accent-light); 
+  background-color: transparent; /* 명시적으로 배경색 제거 */
+  color: inherit; /* 기본 텍스트 색상 상속 */
+}
+
+#intro-card .intro-text .strong-text {
+  font-weight: var(--font-weight-semibold);
+  position: relative;
+  display: inline-block;
+  padding: 0 2px;
+  color: var(--color-primary-dark);
+}
+#intro-card .intro-text .strong-text::after {
+  content: ''; position: absolute; bottom: 2px; left: 0;
+  width: 100%; height: 8px; opacity: 0.3; 
+  z-index: -1;
+  border-radius: var(--border-radius-sm); 
+  background-color: transparent; 
+}
+
+#intro-card .intro-text p { margin-bottom: var(--space-md); line-height: 1.8; }
+#intro-card .info-box {
+  background-color: var(--color-primary-lighter);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  border: 1px solid var(--color-primary-light);
+  border-left: 5px solid var(--color-primary);
+  box-shadow: var(--shadow-soft);
+}
+#intro-card .info-box h3 {
+    font-size: var(--font-size-md); font-weight: var(--font-weight-semibold);
+    color: var(--color-primary-dark); margin-bottom: var(--space-sm);
+    display: flex; align-items: center; gap: var(--space-xs);
+}
+#intro-card .info-box h3 .icon { font-size: 1.2em; color: var(--color-primary); }
+#intro-card .info-box ul { list-style-type: none; padding-left: 0; margin-top: var(--space-sm);}
+#intro-card .info-box li {
+    margin-bottom: var(--space-sm); 
+    padding-left: calc(var(--space-sm) + 5px); 
+    position: relative;
+    line-height: 1.7;
+}
+#intro-card .info-box li::before { 
+    content: '\f00c'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--color-accent); 
+    position: absolute;
+    left: 0;
+    top: 4px; 
+    font-size: 0.9em;
+}
+
+.atm-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: var(--space-sm) var(--space-lg); border-radius: var(--border-radius-pill);
+  font-family: inherit; font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base); line-height: 1.5; text-align: center;
+  text-decoration: none; white-space: nowrap; cursor: pointer; user-select: none;
+  border: 1px solid transparent; background-image: none;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+  min-height: 48px;
+  box-shadow: var(--shadow-soft);
+}
+.atm-button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: var(--shadow-medium); }
+.atm-button:active:not(:disabled) { transform: translateY(0px); box-shadow: var(--shadow-soft); }
+.atm-button:focus-visible { outline: 3px solid var(--color-primary-light); outline-offset: 2px; }
+.atm-button:disabled, .atm-button.is-disabled { opacity: 0.6; cursor: not-allowed; box-shadow: none; transform: none; }
+.atm-button--primary { background-color: var(--color-primary); color: var(--color-text-on-primary); border-color: var(--color-primary); }
+.atm-button--primary:hover:not(:disabled) { background-color: var(--color-primary-dark); border-color: var(--color-primary-dark); }
+.atm-button--secondary { background-color: var(--color-surface); color: var(--color-primary); border: 1px solid var(--color-primary-light); }
+.atm-button--secondary:hover:not(:disabled) { background-color: var(--color-primary-lighter); border-color: var(--color-primary); color: var(--color-primary-dark); }
+.atm-button--accent { background-color: var(--color-accent); color: var(--color-text-on-primary); border-color: var(--color-accent); }
+.atm-button--accent:hover:not(:disabled) { background-color: var(--color-accent-dark); border-color: var(--color-accent-dark); }
+.atm-button--text {
+  background-color: transparent; color: var(--color-primary); border: 1px solid transparent;
+  font-size: var(--font-size-sm); padding: var(--space-xs) var(--space-sm); box-shadow: none;
+}
+.atm-button--text:hover:not(:disabled) { color: var(--color-primary-dark); background-color: var(--color-primary-lighter); border-color: var(--color-primary-light); transform: none; }
+.atm-button--lg { font-size: var(--font-size-md); padding: var(--space-md) var(--space-xl); min-height: 52px; }
+.atm-button .icon { margin-right: var(--space-xs); font-size: 0.9em; }
+.atm-button .icon-after { margin-left: var(--space-xs); margin-right: 0; }
+
+.u-display-block { display: block !important; }
+.u-margin-center { margin-left: auto; margin-right: auto; }
+.u-margin-bottom-md { margin-bottom: var(--space-md) !important; }
+.u-margin-top-lg { margin-top: var(--space-lg) !important; }
+.u-color-primary { color: var(--color-primary) !important; }
+
+.comp-privacy-notice {
+  font-size: var(--font-size-sm); color: var(--color-text-light); text-align: center;
+  margin-top: var(--space-lg); padding: var(--space-sm);
+  background-color: var(--color-primary-lighter); border-radius: var(--border-radius-base);
+  line-height: 1.6; border: 1px solid var(--color-border-light);
+}
+
+#progress-container { margin: var(--space-lg) 0; }
+.mol-progress-bar {
+  height: 12px; width: 100%; background: var(--color-primary-lighter);
+  border-radius: var(--border-radius-pill); margin-bottom: var(--space-xs);
+  overflow: hidden; border: 1px solid var(--color-border);
+}
+.mol-progress-bar__inner {
+  height: 100%; width: 0%; background: var(--color-primary);
+  border-radius: var(--border-radius-pill); transition: width 0.4s ease;
+}
+.mol-progress-bar__text { text-align: right; font-size: var(--font-size-sm); color: var(--color-text-light); }
+
+.mol-question-item { display: none; animation: fadeInCard 0.5s ease-out; }
+.mol-question-item.is-active { display: block; }
+@keyframes fadeInCard { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.mol-question-item__header { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md); }
+.atm-question-number {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; background-color: var(--color-primary);
+  color: white; font-weight: var(--font-weight-bold); border-radius: 50%;
+  flex-shrink: 0; box-shadow: var(--shadow-soft); font-size: var(--font-size-base);
+}
+.mol-question-item__title {
+  font-size: var(--font-size-md); font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary); flex-grow: 1; margin: 0; line-height: 1.6;
+}
+.mol-question-item p { margin-bottom: var(--space-md); font-size: var(--font-size-base); color: var(--color-text-secondary); }
+.mol-option-group { display: flex; gap: var(--space-md); margin: var(--space-lg) 0; justify-content: center; }
+.mol-option-group__item { flex: 1; max-width: 200px; }
+.atm-option-label {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: var(--space-lg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-lg); cursor: pointer;
+  transition: all var(--transition-duration) var(--transition-timing-function); text-align: center;
+  height: 100%; background-color: var(--color-surface);
+}
+.atm-option-emoji { font-size: 36px; margin-bottom: var(--space-sm); line-height: 1; }
+.atm-option-label:hover {
+  background-color: var(--color-primary-lighter); border-color: var(--color-primary-light);
+  transform: translateY(-3px) scale(1.02); box-shadow: var(--shadow-medium);
+}
+input[type="radio"] { display: none; }
+input[type="radio"]:checked + .atm-option-label {
+  background-color: var(--color-primary-light); border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-primary-lighter), var(--shadow-medium); transform: scale(1.05);
+  color: var(--color-primary-dark);
+}
+input[type="radio"]:focus-visible + .atm-option-label {
+    outline: 3px solid var(--color-primary); outline-offset: 3px;
+}
+.atm-option-label__description {
+  font-size: var(--font-size-base);
+  text-align: center; color: var(--color-text-light);
+  font-weight: var(--font-weight-medium);
+}
+input[type="radio"]:checked + .atm-option-label .atm-option-label__description {
+    color: var(--color-primary-dark); font-weight: var(--font-weight-semibold);
+}
+
+.mol-navigation-buttons {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: var(--space-xl); width: 100%;
+}
+.mol-navigation-buttons .atm-button { flex-grow: 0; }
+.mol-navigation-buttons.justify-start .atm-button:not(:last-child),
+.mol-navigation-buttons.justify-center .atm-button:not(:last-child) { margin-right: var(--space-md); }
+.mol-navigation-buttons.justify-end .atm-button:not(:first-child) { margin-left: var(--space-md); }
+.mol-navigation-buttons.justify-start .atm-button,
+.mol-navigation-buttons.justify-end .atm-button,
+.mol-navigation-buttons.justify-center .atm-button {
+    flex-grow: 0; min-width: 120px; max-width: 250px;
+}
+
+.org-result-container { display: none; padding: var(--space-md); animation: fadeInCard 0.5s ease-out; }
+.section__header { text-align: center; margin-bottom: var(--space-lg); }
+.section__title { font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); }
+.section__subtitle { font-size: var(--font-size-md); color: var(--color-text-secondary); }
+.mol-result-summary {
+  padding: var(--space-lg); border-radius: var(--border-radius-lg);
+  margin-bottom: var(--space-xl); box-shadow: var(--shadow-medium);
+  border-left: 6px solid;
+}
+.mol-result-summary--good { background-color: var(--color-success-bg); border-left-color: var(--color-success-border); }
+.mol-result-summary--good .mol-result-summary__level, .mol-result-summary--good .mol-result-summary__percentage { color: var(--color-success-text); }
+.mol-result-summary--moderate { background-color: var(--color-warning-bg); border-left-color: var(--color-warning-border); }
+.mol-result-summary--moderate .mol-result-summary__level, .mol-result-summary--moderate .mol-result-summary__percentage { color: var(--color-warning-text); }
+.mol-result-summary--danger { background-color: var(--color-danger-bg); border-left-color: var(--color-danger-border); }
+.mol-result-summary--danger .mol-result-summary__level, .mol-result-summary--danger .mol-result-summary__percentage { color: var(--color-danger-text); }
+
+.mol-result-summary__level {
+  display: flex; align-items: center; gap: var(--space-sm);
+  font-size: var(--font-size-lg); font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+.mol-result-summary__percentage {
+  font-size: 32px; font-weight: var(--font-weight-bold);
+  margin: var(--space-sm) 0 var(--space-md); text-align: center;
+}
+.mol-result-summary__score-text {
+    text-align: center; font-size: var(--font-size-base); color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+}
+.mol-result-summary__description {
+  font-size: var(--font-size-base); line-height: 1.8;
+  margin-bottom: var(--space-md); color: var(--color-text-secondary);
+}
+.org-result-details__item {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-base);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-soft);
+}
+.org-result-details__title {
+  font-weight: var(--font-weight-semibold); margin-bottom: var(--space-md);
+  color: var(--color-text-primary); line-height: 1.6; font-size: var(--font-size-base);
+}
+.org-result-details__answer-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-sm); }
+.atm-answer-badge {
+  padding: 6px 14px; border-radius: var(--border-radius-pill);
+  font-size: var(--font-size-xs); font-weight: var(--font-weight-bold);
+}
+.atm-answer-badge--correct { background-color: var(--color-success-bg); color: var(--color-success-text); border: 1px solid var(--color-success-border); }
+.atm-answer-badge--incorrect { background-color: var(--color-danger-bg); color: var(--color-danger-text); border: 1px solid var(--color-danger-border); }
+.org-result-details__explanation {
+  font-size: var(--font-size-sm); color: var(--color-text-secondary);
+  margin-top: var(--space-md); line-height: 1.7;
+  background-color: var(--color-primary-lighter);
+  padding: var(--space-sm); border-radius: var(--border-radius-sm); border-left: 3px solid var(--color-primary);
+}
+.atm-answer-info { display: flex; gap: var(--space-xs); font-size: var(--font-size-sm); color: var(--color-text-light); }
+
+.mol-strategy-card {
+  background-color: var(--color-surface); border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium); padding: var(--space-lg); margin-bottom: var(--space-lg);
+  border: 1px solid var(--color-border-light); border-left: 5px solid var(--color-primary);
+}
+.mol-strategy-card__title {
+  font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark); margin-bottom: var(--space-md);
+  display: flex; align-items: center; gap: var(--space-sm);
+}
+.mol-strategy-card__title .icon { font-size: 1.1em; color: var(--color-primary); }
+.mol-strategy-card ol { list-style-type: none; counter-reset: step; padding-left: 0; }
+.mol-strategy-card li {
+  position: relative; padding-left: 40px;
+  margin-bottom: var(--space-md); counter-increment: step; line-height: 1.8;
+  color: var(--color-text-secondary); font-size: var(--font-size-base);
+}
+.mol-strategy-card li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0;
+  font-weight: bold; color: var(--color-text-on-primary);
+  font-size: 1em; background-color: var(--color-primary);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+.mol-strategy-card li strong { color: var(--color-text-primary); font-weight: var(--font-weight-semibold); }
+
+.reflection-area { margin-top: var(--space-xl); }
+.reflection-area label {
+    display: block; font-weight: var(--font-weight-semibold);
+    color: var(--color-primary-dark); margin-bottom: var(--space-md);
+    font-size: var(--font-size-md);
+    display: flex; align-items: center; gap: var(--space-xs);
+}
+.reflection-area label .icon { font-size: 1.1em; color: var(--color-primary); }
+.reflection-area textarea {
+    width: 100%; min-height: 120px; padding: var(--space-md);
+    border: 1px solid var(--color-border); border-radius: var(--border-radius-base);
+    font-family: var(--font-family-base); font-size: var(--font-size-base);
+    resize: vertical; line-height: 1.7; box-shadow: var(--shadow-soft);
+}
+.reflection-area textarea:focus {
+    outline-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-lighter), var(--shadow-medium);
+    border-color: var(--color-primary);
+}
+.reflection-area p.help-text {
+    font-size: var(--font-size-sm); color: var(--color-text-light);
+    margin-top: var(--space-sm); line-height: 1.6;
+}
+
+.mol-tip-box {
+  background: var(--color-info-bg); border-radius: var(--border-radius-lg);
+  padding: var(--space-lg); margin-bottom: var(--space-lg);
+  border-left: 5px solid var(--color-info-border); box-shadow: var(--shadow-soft);
+}
+.mol-tip-box__title {
+  font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold);
+  color: var(--color-info-text); margin-bottom: var(--space-md);
+  display: flex; align-items: center; gap: var(--space-sm);
+}
+.mol-tip-box__title .icon { font-size: 1.1em; color: var(--color-info-text); }
+.mol-tip-box ul { list-style-type: none; padding-left: 0; margin-top: var(--space-sm); }
+.mol-tip-box li {
+    margin-bottom: var(--space-sm); font-size: var(--font-size-base);
+    padding-left: calc(var(--space-sm) + 5px); 
+    position: relative;
+    line-height: 1.7;
+}
+.mol-tip-box li::before { 
+    content: '\f0eb'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--color-info-text); 
+    position: absolute;
+    left: 0;
+    top: 4px; 
+    font-size: 0.9em;
+}
+
+.atm-toast-notification {
+  position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%);
+  background: var(--color-text-primary); color: var(--color-surface);
+  padding: var(--space-md) var(--space-lg); border-radius: var(--border-radius-pill);
+  box-shadow: var(--shadow-strong); z-index: 10000;
+  opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  font-size: var(--font-size-base);
+}
+.atm-toast-notification.is-active { opacity: 1; visibility: visible; bottom: 40px; }
+.atm-toast-notification.is-error { background-color: var(--color-danger-text); }
+.atm-toast-notification.is-success { background-color: var(--color-accent-dark); }
+
+.mol-share-buttons { display: flex; gap: var(--space-md); margin-top: var(--space-md); justify-content: center; }
+
+.org-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(31, 41, 55, 0.7); 
+  display: none; justify-content: center; align-items: center;
+  z-index: 10000; opacity: 0; visibility: hidden;
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
+}
+.org-modal-overlay.is-active { opacity: 1; visibility: visible; display: flex; }
+.mol-modal-container {
+  background-color: var(--color-surface); border-radius: var(--border-radius-lg);
+  width: 90%; max-width: 700px; max-height: 90vh; overflow: hidden;
+  box-shadow: var(--shadow-strong); display: flex; flex-direction: column;
+  transform: scale(0.95) translateY(-20px);
+  transition: transform var(--transition-duration) var(--transition-timing-function),
+              opacity var(--transition-duration) var(--transition-timing-function);
+  opacity: 0;
+}
+.org-modal-overlay.is-active .mol-modal-container { transform: scale(1) translateY(0); opacity: 1; }
+.mol-modal-header {
+  padding: var(--space-md) var(--space-lg); border-bottom: 1px solid var(--color-border);
+  display: flex; justify-content: space-between; align-items: center;
+  background-color: var(--color-primary-lighter); position: sticky; top: 0; z-index: 1;
+}
+.mol-modal-header__title {
+  font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark); margin: 0;
+  display: flex; align-items: center; gap: var(--space-xs);
+}
+.mol-modal-header__title .icon { font-size: 1.1em; color: var(--color-primary); }
+.atm-modal-close-button {
+  background: none; border: none; color: var(--color-text-light);
+  font-size: 1.8rem; line-height: 1; padding: var(--space-xs); border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; transition: all var(--transition-duration);
+}
+.atm-modal-close-button:hover, .atm-modal-close-button:focus-visible {
+  background-color: var(--color-border-light); color: var(--color-text-primary);
+}
+.mol-modal-content { padding: var(--space-lg); overflow-y: auto; flex-grow: 1; }
+.mol-modal-content h2 {
+    font-size: var(--font-size-md); color: var(--color-primary-dark);
+    margin-top: var(--space-lg); margin-bottom: var(--space-sm);
+    font-weight: var(--font-weight-semibold);
+}
+.mol-modal-content h2:first-child { margin-top: 0; }
+.mol-modal-content ul { list-style-type: none; padding-left: 0; }
+.mol-modal-content ul li {
+    position: relative; padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm); line-height: 1.7;
+}
+.mol-modal-content ul li::before {
+    content: '\f058'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900; 
+    position: absolute; left: 0; top: 4px;
+    color: var(--color-accent); font-size: 0.9em; 
+}
+.mol-modal-content .example-box {
+    background-color: var(--color-primary-lighter);
+    padding: var(--space-md);
+    border-radius: var(--border-radius-base);
+    margin: var(--space-md) 0 var(--space-lg);
+    border-left: 4px solid var(--color-primary);
+    box-shadow: var(--shadow-soft);
+}
+.mol-modal-content .example-box strong { color: var(--color-primary-dark); font-weight: var(--font-weight-semibold); }
+.mol-modal-content table { width: 100%; border-collapse: collapse; margin: var(--space-md) 0; font-size: var(--font-size-sm); }
+.mol-modal-content th, .mol-modal-content td { border: 1px solid var(--color-border); padding: var(--space-sm); text-align: left; }
+.mol-modal-content th { background-color: var(--color-primary-lighter); color: var(--color-primary-dark); font-weight: var(--font-weight-semibold); }
+
+#result-capture-area { background-color: var(--color-background); padding: var(--space-md); }
+.is-capturing .mol-share-buttons,
+.is-capturing #restart-btn, 
+.is-capturing p[style*="text-align:center; color: var(--color-text-light)"] 
+{ visibility: hidden !important; }
+
+.is-capturing .atm-card, .is-capturing .mol-result-summary, .is-capturing blockquote,
+.is-capturing .mol-strategy-card, .is-capturing .mol-tip-box, .is-capturing .reflection-area {
+    box-shadow: none !important;
+    border: 1px solid var(--color-border-light) !important;
+}
+
+.inspirational-quote {
+  margin: var(--space-xl) 0;
+  padding: var(--space-lg);
+  background-color: var(--color-primary-lighter);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+.inspirational-quote p { margin-bottom: var(--space-sm); font-size: var(--font-size-base); }
+.inspirational-quote footer {
+  font-style: normal;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(var(--bottom-nav-height-actual) + var(--space-lg));
+  }
+  .page-header__title { font-size: var(--font-size-lg); }
+  .page-header__description { font-size: var(--font-size-base); }
+  .page-header__description br.mobile-only { display: block; }
+
+  .sticky-steps-indicator-wrapper { height: auto; padding: var(--space-xs) 0; }
+  .steps-indicator::before { top: 12px; left: 5%; width: 90%; }
+  .step-icon { width: 28px; height: 28px; font-size: var(--font-size-sm); }
+  .step-label { font-size: 10px; max-width: 70px; }
+  .step-label small { display: none; }
+
+
+  .mol-navigation-buttons {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background-color: var(--color-surface);
+    padding: var(--space-sm) var(--space-md);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    z-index: 100; border-top: 1px solid var(--color-border-light);
+    margin-top: 0;
+  }
+  .mol-navigation-buttons .atm-button { flex-grow: 1; margin: 0 var(--space-xs); }
+  .mol-navigation-buttons .atm-button:first-child { margin-left: 0; }
+  .mol-navigation-buttons .atm-button:last-child { margin-right: 0; }
+
+  .atm-toast-notification.is-active {
+    bottom: calc(var(--bottom-nav-height-actual) + var(--space-md));
+  }
+
+  .mol-option-group { flex-direction: column; }
+  .mol-option-group__item { max-width: 100%; }
+  .atm-option-label { padding: var(--space-md); }
+  .atm-option-emoji { font-size: 32px; }
+  .atm-option-label__description { font-size: var(--font-size-sm); }
+  .mol-question-item__title { font-size: var(--font-size-base); line-height: 1.5; }
+  .mol-question-item p { font-size: var(--font-size-sm); margin-bottom: var(--space-sm); }
+  .mol-option-group { margin: var(--space-md) 0; gap: var(--space-sm); }
+
+  .mol-modal-content { padding: var(--space-md); }
+  .mol-modal-header__title { font-size: var(--font-size-md); }
+}
+
+.table-responsive { width: 100%; overflow-x: auto; margin: var(--space-md) 0; }
+.mol-modal-content .table-responsive table { width: 100%; border-collapse: collapse; }
+@media (min-width: 601px) {
+  .mol-modal-content .table-responsive th,
+  .mol-modal-content .table-responsive td { white-space: nowrap; }
+}
+@media (max-width: 600px) {
+  .mol-modal-content .table-responsive th,
+  .mol-modal-content .table-responsive td { white-space: normal; }
+}
+
+#start-btn { font-size: 1.1rem; padding: var(--space-md) var(--space-lg); } 
+#prev-btn, #next-btn { font-size: 1.1rem; padding: var(--space-md) var(--space-lg); } 
+</style>
+</head>
+<body>
+<header class="page-header" id="pageHeader">
+    <h1 class="page-header__title"><span class="emoji">💼</span> 직장인 마음 정리 스킬 UP!</h1>
+    <p class="page-header__description">
+        혹시 직장에서 '나만 왜 이렇게 힘들지?' 생각한 적 있나요? <br class="mobile-only"/>
+        어쩌면 그건 '진짜 일어난 일'이 아니라 '내 생각' 때문일지도 몰라요!
+    </p>
+</header>
+
+<div class="sticky-steps-indicator-wrapper" id="stickyStepsIndicatorWrapper">
+    <div class="steps-indicator">
+      <div class="step active" id="step-indicator-0">
+        <div class="step-icon">1</div>
+        <div class="step-label">테스트 안내</div>
+      </div>
+      <div class="step" id="step-indicator-1">
+        <div class="step-icon">2</div>
+        <div class="step-label">테스트 진행</div>
+      </div>
+      <div class="step" id="step-indicator-2">
+        <div class="step-icon">3</div>
+        <div class="step-label">결과와 조언</div>
+      </div>
+    </div>
+  </div>
+
+<main class="layout-container">
+    <section class="atm-card visible" id="intro-card">
+        <header class="atm-card__header">
+            <h2 class="atm-card__title"><i class="fas fa-glasses icon"></i> '진짜 일어난 일' vs '내 머릿속 생각' 구분하기</h2>
+            <button class="atm-button atm-button--text atm-button--sm" id="learn-more-btn">
+                <i class="fas fa-info-circle icon"></i> 이게 왜 중요할까요?
+            </button>
+        </header>
+        <div class="atm-card__body">
+            <div class="intro-text">
+                <p><span class="strong-text">직장 생활, 매일매일이 드라마 같죠?</span> 😅<br/>
+                "팀장님이 내 보고서만 대충 보시는 것 같아... <span class="highlight">나한테 실망하셨나?</span>"<br/>
+                "고객이 전화를 빨리 끊었어. <span class="highlight">내 설명이 별로였나 봐.</span>"<br/>
+                "동료가 회의 때 내 의견에 아무 말 안 했어. <span class="highlight">나를 무시하는 건가?</span>"
+                </p>
+                <p>이런 생각들 때문에 밤잠 설치고, 괜히 동료나 고객에게 쌀쌀맞게 대한 적, 혹시 없으세요? <br/>
+                마치 <span class="highlight">고슴도치</span>처럼 서로에게 다가가고 싶지만, 가시 때문에 망설이는 것처럼요. 🦔</p>
+                <p>특히 감정이 <span class="strong-text">버럭!</span> 하고 올라올 때, 우리 뇌의 <span class="highlight">'이성 스위치(전전두엽)'</span>는 잠시 꺼지고 <span class="highlight">'감정 엔진(편도체)'</span>만 쌩쌩 돌아가기 쉬워요. 그럼 눈앞의 상황도 제대로 보이지 않죠.</p>
+                <p class="u-margin-top-md">이 테스트는 바로 그 <span class="strong-text">'진짜 일어난 일(사실)'</span>과 <span class="strong-text">'그 일에 대한 내 생각(해석)'</span>을 구분하는 연습을 도와줄 거예요. 마치 운전면허 필기시험처럼요! 이 능력만 조금 키워도, 직장 생활이 훨씬 편해질 수 있답니다. 😊</p>
+
+                <div class="info-box u-margin-top-lg">
+                    <h3><i class="fas fa-gift icon"></i> 이 테스트를 통해 얻을 수 있는 선물!</h3>
+                    <ul>
+                        <li>내 감정이 진짜 어디서 시작됐는지 알게 돼요. (감정의 뿌리 찾기!)</li>
+                        <li>상황을 좀 더 <span class="highlight">또렷하게</span> 볼 수 있는 안경을 얻게 돼요. (객관성 UP!)</li>
+                        <li>동료, 상사, 고객과의 관계에서 <span class="highlight">오해는 줄이고, 이해는 넓힐</span> 수 있어요.</li>
+                        <li>괜한 감정싸움에 에너지 낭비하지 않게 돼요. (스트레스 DOWN!)</li>
+                        <li>결국, <span class="highlight">더 건강하고 행복한 직장 생활</span>에 한 걸음 다가갈 수 있어요!</li>
+                    </ul>
+                </div>
+                <p class="u-margin-top-md u-color-text-light" style="text-align: center;"><i class="fas fa-clock"></i> 예상 소요시간: 약 5~7분 (20문항)</p>
+            </div>
+            <button class="atm-button atm-button--primary atm-button--lg u-display-block u-margin-center" id="start-btn">
+                테스트 시작하기 <i class="fas fa-arrow-right icon icon-after"></i>
+            </button>
+            <div class="comp-privacy-notice">
+                🔒 안심하세요! 여러분의 답변은 어디에도 저장되거나 전송되지 않아요.<br/>오직 여러분 자신을 위한 시간이니, 편하게 테스트해보세요. 😊
+            </div>
+        </div>
+    </section>
+
+    <div id="progress-container" style="display: none;">
+        <div class="mol-progress-bar">
+            <div class="mol-progress-bar__inner" id="progress-bar"></div>
+        </div>
+        <p class="mol-progress-bar__text" id="progress-text" aria-live="polite">1/20</p>
+    </div>
+
+    <section class="atm-card" id="question-card" style="display: none;">
+        <div class="atm-card__body" id="question-area">
+            <!-- 질문 내용이 여기에 동적으로 삽입됩니다. -->
+        </div>
+    </section>
+
+    <div class="mol-navigation-buttons" id="navigation-buttons-container" style="display: none;">
+        <button class="atm-button atm-button--secondary" id="prev-btn">
+            <i class="fas fa-arrow-left icon"></i> 이전
+        </button>
+        <button class="atm-button atm-button--primary" id="next-btn">
+            다음 <i class="fas fa-arrow-right icon icon-after"></i>
+        </button>
+    </div>
+
+
+    <section class="atm-card" id="result-card-overall" style="display: none;">
+        <header class="atm-card__header">
+            <h2 class="atm-card__title"><i class="fas fa-chart-pie icon"></i> 나의 직장 소통 스타일 분석!</h2>
+        </header>
+        <div class="atm-card__body">
+          <div id="result-capture-area">
+            <div class="org-result-container" id="result-container">
+                <header class="section__header">
+                    <h1 class="section__title u-color-primary">사실 vs 해석 구분 능력 테스트 결과</h1>
+                    <p class="section__subtitle">직장 생활, 당신의 마음은 '진짜 일어난 일'에 얼마나 귀 기울이고 있나요?</p>
+                </header>
+
+                <div class="mol-result-summary mol-result-summary--good" id="result-good" style="display: none;">
+                    <h3 class="mol-result-summary__level"><span class="emoji" style="font-size: 1.2em;">🟢</span> 프로 소통러! 사실과 해석을 잘 구분해요!</h3>
+                    <p class="mol-result-summary__percentage" id="good-percentage"></p>
+                    <p class="mol-result-summary__score-text" id="good-score-text"></p>
+                    <p class="mol-result-summary__description">
+                        와! 정말 대단해요! 🎉<br/>당신은 마치 <span class="highlight">마음의 CCTV</span>를 가진 것처럼, 직장에서 일어난 일과 그에 대한 생각을 명확히 구분하는 능력이 뛰어나시네요.
+                        예를 들어, 고객이 "좀 더 생각해볼게요"라고 말해도, '아, 이건 거절이 아니라 정말 시간이 필요한 거구나' 하고 <span class="strong-text">침착하게 상황을 판단</span>할 줄 아시는군요!
+                        이런 능력 덕분에 동료나 상사, 고객과의 관계에서 불필요한 오해 없이 매끄럽게 소통하고, 스트레스도 훨씬 덜 받으실 거예요. 앞으로도 이 멋진 능력을 쭉 유지해주세요!
+                    </p>
+                </div>
+
+                <div class="mol-result-summary mol-result-summary--moderate" id="result-moderate" style="display: none;">
+                    <h3 class="mol-result-summary__level"><span class="emoji" style="font-size: 1.2em;">🟠</span> 맑다가도 흐림! 가끔 내 생각에 빠질 때가 있어요</h3>
+                    <p class="mol-result-summary__percentage" id="moderate-percentage"></p>
+                    <p class="mol-result-summary__score-text" id="moderate-score-text"></p>
+                    <p class="mol-result-summary__description">
+                        괜찮아요! 평소에는 "아, 이건 내 생각이구나" 하고 잘 구분하시지만, <span class="highlight">업무가 몰리거나 감정이 격해질 때</span>는 조금 헷갈리시는 것 같아요. 😊
+                        마치 <span class="strong-text">안개가 살짝 낀 날처럼</span>, 때때로 사실과 내 생각의 경계가 흐릿하게 느껴질 수 있어요.
+                        특히 상사가 무표정하게 "수고했어요"라고 말할 때, '혹시 내가 뭘 잘못했나?' 하고 혼자 걱정할 수 있죠. 하지만 괜찮아요! 아래 조언들을 조금만 연습하시면, 안개를 걷어내고 더 명확하게 상황을 보실 수 있을 거예요!
+                    </p>
+                </div>
+
+                <div class="mol-result-summary mol-result-summary--danger" id="result-danger" style="display: none;">
+                    <h3 class="mol-result-summary__level"><span class="emoji" style="font-size: 1.2em;">🔴</span> 마음의 안경, 도수 조절이 필요해요!</h3>
+                    <p class="mol-result-summary__percentage" id="danger-percentage"></p>
+                    <p class="mol-result-summary__score-text" id="danger-score-text"></p>
+                    <p class="mol-result-summary__description">
+                        먼저, 이 테스트를 하신 것만으로도 정말 큰 용기를 내신 거예요! 😊<br/>혹시 직장 생활에서 "내가 너무 예민한가?", "왜 나만 이렇게 힘들지?" 하고 자주 느끼셨나요?
+                        마치 <span class="highlight">나침반이 고장 난 배처럼</span>, 어디로 가야 할지, 뭐가 맞는 건지 방향을 잡기 어려웠을 수 있어요.
+                        하지만 중요한 건, 이 능력은 <span class="strong-text">연습을 통해 분명히 좋아질 수 있다</span>는 거예요! 아래 방법들을 천천히 따라 해보시면, 마음의 안경 도수를 맞춘 것처럼 직장 생활이 훨씬 편안해지고, 관계를 보는 시야도 넓어질 거예요. 혼자가 아니니 걱정 마세요!
+                    </p>
+                </div>
+
+                 <div class="inspirational-quote">
+                    <p>"우리를 힘들게 하는 것은 일어난 사건 그 자체가 아니라, 그 사건에 대한 우리의 생각이다."</p>
+                    <footer>- 에픽테토스 (옛날 똑똑한 철학자 아저씨)</footer>
+                </div>
+
+
+                <div id="results-details" class="u-margin-top-lg">
+                    <h3 class="u-color-primary u-margin-bottom-md" style="text-align:center; font-size: var(--font-size-lg);">📝 문항별 정답 다시보기</h3>
+                    <div id="result-items-container"></div>
+                </div>
+
+
+                <div class="mol-strategy-card u-margin-top-lg">
+                    <h3 class="mol-strategy-card__title"><i class="fas fa-brain icon"></i> 🧠 마음 정리 스킬 UP! - '잠깐! 이건 뭐지?' 훈련</h3>
+                    <p style="margin-bottom: var(--space-md); font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+                        직장에서 속상하거나 화나는 일이 생겼을 때, 바로 반응하기 전에 이 4단계를 떠올려보세요. 마치 요리 레시피처럼요!
+                    </p>
+                    <ol>
+                        <li><strong>멈추기 (Stop ✋)</strong>: 감정이 확 올라올 때, 일단 <span class="highlight">"잠깐!"</span> 하고 멈춰 서세요. 심호흡 한 번 크게! (예: 팀장님이 정색하고 "이거 다시 해와요."라고 할 때, 바로 울컥하지 말고 일단 멈춤!)</li>
+                        <li><strong>살펴보기 (Think 🤔)</strong>: "지금 <span class="highlight">진짜 일어난 일</span>이 뭐지? CCTV에 찍혔다면 뭐라고 나올까?" 감정을 쏙 빼고 사실만 보세요. (예: "팀장님이 보고서를 돌려주면서 '다시 하세요'라고 말했다." 이게 사실!)</li>
+                        <li><strong>다른 가능성 찾기 (Options 💡)</strong>: "혹시 <span class="highlight">내가 모르는 다른 이유</span>가 있을까? 내가 생각한 것 말고 다른 해석은 없을까?" 하고 여러 각도에서 생각해보세요. (예: "팀장님이 오늘 컨디션이 안 좋으신가? 아니면 내가 중요한 부분을 빼먹었나? 아니면 그냥 원래 말투가 좀 단호하신 편인가?")</li>
+                        <li><strong>나아가기 (Proceed ✅)</strong>: 여러 가능성을 생각해봤다면, 이제 <span class="highlight">가장 현실적이고 도움 되는 생각</span>을 선택하고 행동하세요. (예: "일단 뭐가 문제인지 정확히 여쭤보고 수정하자. 너무 개인적으로 받아들이지 말자.")</li>
+                    </ol>
+                </div>
+
+                <div class="mol-tip-box u-margin-top-lg">
+                    <h3 class="mol-tip-box__title"><i class="fas fa-user-friends icon"></i> 직장 내 흔한 '오해 안경' 벗기!</h3>
+                    <p>혹시 이런 '오해 안경'을 쓰고 세상을 보고 있진 않나요?</p>
+                    <ul style="margin-top: var(--space-sm);">
+                        <li><strong>상사가 내 보고서를 꼼꼼히 본다.</strong> → <span class="highlight">나를 못 믿어서 트집 잡으려는 걸까?</span> (오해 안경👓) / <span class="strong-text">내 성장을 위해 더 신경 써주시는 걸 수도 있어! 👍</span> (긍정 안경✨)</li>
+                        <li><strong>동료가 회의 때 내 의견에 반대했다.</strong> → <span class="highlight">나를 싫어하나? 내 의견은 항상 별로인가?</span> (오해 안경👓) / <span class="strong-text">더 좋은 결과를 위해 다른 각도에서 생각해주는구나! 고맙네. 🤔</span> (긍정 안경✨)</li>
+                        <li><strong>고객이 제품 가격을 묻고는 바로 끊었다.</strong> → <span class="highlight">우리 제품이 너무 비싸서 가망 없나 봐.</span> (오해 안경👓) / <span class="strong-text">지금은 바쁘시거나, 여러 곳 비교 중일 수 있어. 다음에 다시 연락드려볼까? 📞</span> (긍정 안경✨)</li>
+                        <li><strong>내가 실수했을 때 팀장님이 아무 말 안 하신다.</strong> → <span class="highlight">나한테 엄청 실망해서 포기하셨나 봐. 😭</span> (오해 안경👓) / <span class="strong-text">스스로 깨닫고 해결하길 기다려주시는 걸 수도 있어. 아니면 나중에 따로 말씀하시려나? 🧐</span> (긍정 안경✨)</li>
+                    </ul>
+                    <p class="u-margin-top-md">이런 '오해 안경'은 나도 모르게 쓰고 있을 때가 많아요. <span class="strong-text">"어? 혹시 나 지금 오해 안경 썼나?"</span> 하고 자주 점검해보는 게 중요해요!</p>
+                </div>
+
+                <div class="reflection-area">
+                    <label for="reflection-input"><i class="fas fa-feather-alt icon"></i> 나의 다짐 한마디 (나만 볼 수 있어요!) </label>
+                    <textarea id="reflection-input" rows="5" placeholder="테스트를 통해 새롭게 알게 된 점이나, 앞으로 '이것만은 꼭 해봐야지!' 하는 다짐을 자유롭게 적어보세요. 글로 적으면 실천할 힘이 더 강해진대요! (이 내용은 저장되지 않아요)"></textarea>
+                    <p class="help-text">이곳에 적은 내용은 페이지를 벗어나면 사라집니다. 개인적인 성찰 용도로 활용해보세요.</p>
+                </div>
+            </div>
+            <div class="u-text-center u-margin-top-lg">
+                <div class="mol-share-buttons">
+                    <button class="atm-button atm-button--secondary" id="save-image-btn">
+                        <i class="fas fa-image icon"></i> 결과 이미지로 저장
+                    </button>
+                    <button class="atm-button atm-button--secondary" id="copy-link-btn">
+                        <i class="fas fa-link icon"></i> 테스트 링크 복사
+                    </button>
+                </div>
+                <button class="atm-button atm-button--primary u-display-block u-margin-center" id="restart-btn" style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
+                  <i class="fas fa-redo-alt icon"></i> 테스트 다시하기
+                </button>
+                <p style="text-align:center; color: var(--color-text-light); font-size: var(--font-size-sm); margin-top: var(--space-md);">
+                  ※ 이 테스트는 스스로를 돌아보는 거울과 같아요. 병원 진단이나 전문 상담을 대신할 수는 없어요. <br/>만약 마음이 많이 힘들다면 전문가의 도움을 받는 것이 가장 좋아요. 😊
+                </p>
+            </div>
+          </div>
+        </div>
+    </section>
+</main>
+
+<div class="atm-toast-notification" id="toast-notification" role="alert" aria-live="assertive"></div>
+
+<div class="org-modal-overlay" id="modal-overlay">
+    <div class="mol-modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-id">
+        <header class="mol-modal-header">
+            <h3 class="mol-modal-header__title" id="modal-title-id"><i class="fas fa-book-open icon"></i> '사실'과 '해석' 구분, 왜 중요할까요?</h3>
+            <button class="atm-modal-close-button" id="modal-close" aria-label="닫기"><i class="fas fa-times"></i></button>
+        </header>
+        <div class="mol-modal-content">
+            <div style="font-size: 18px; color: var(--color-primary); font-weight: 500; text-align: center; margin: var(--space-lg) 0; line-height: 1.6;">
+                <p>❝직장에서 나를 힘들게 하는 건<br/> 어쩌면 <span class="highlight">'진짜 일어난 일'</span>이 아니라,<br/> 그 일에 대한 <span class="highlight">'나의 생각'</span>일 수 있어요.❞</p>
+            </div>
+            <div class="u-margin-bottom-lg">
+                <h2>🤔 왜 '사실'과 '해석'을 구분해야 할까요?</h2>
+                <p>직장 생활하다 보면 이런 생각들, 한 번쯤 해보셨죠?<br/>
+                   😵‍💫 <strong>"팀장님 표정이 안 좋은데... 혹시 내가 뭐 잘못했나?"</strong> (팀장님 표정 안 좋음 = 사실 / 내가 잘못함 = 해석)<br/>
+                   🤔 <strong>"고객이 내 설명에 시큰둥하네. 우리 제품 별로인가 봐."</strong> (고객 반응 시큰둥 = 사실 / 제품 별로임 = 해석)<br/>
+                </p>
+                <p>특히 스트레스 받거나 감정이 격해지면, 우리 뇌는 <span class="highlight">'사실 필터'</span>가 고장나기 쉬워요. 그래서 객관적인 '사실'과 주관적인 '해석'을 구분하는 연습이 필요해요. 마치 운동처럼요!</p>
+                <div class="example-box">
+                    <strong>✨ '사실'과 '해석'을 잘 구분하면 이런 점이 좋아요!</strong>
+                    <ul>
+                        <li>내 감정에 휘둘리지 않고 <span class="strong-text">차분하게 대처</span>할 수 있어요.</li>
+                        <li>상황을 <span class="strong-text">있는 그대로</span> 볼 수 있어서 오해가 줄어요.</li>
+                        <li>상대방의 말이나 행동에 <span class="strong-text">상처를 덜 받아요.</span> (튼튼한 마음 방패 장착!)</li>
+                        <li>결국, 직장 생활의 <span class="strong-text">스트레스가 줄고, 일도 더 잘 풀려요!</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="u-margin-bottom-lg">
+                <h2>📜 옛날 똑똑한 사람들도 다 그랬대요!</h2>
+                <p>수많은 똑똑한 사람들이 옛날부터 강조했어요:</p>
+                <ul>
+                    <li>🧘‍♀️ <strong>불교</strong>: "모든 건 마음이 만들어내는 거야 (일체유심조 一切唯心造)."</li>
+                    <li>🏛️ <strong>스토아 철학자 에픽테토스</strong>: "우리를 괴롭히는 건 사건 그 자체가 아니라, 사건에 대한 우리 생각이야." (이 아저씨 말 또 나왔죠? 그만큼 중요하단 뜻!)</li>
+                    <li>🔬 <strong>인지행동치료(CBT)</strong>: "우리의 생각(인지)이 감정과 행동에 엄청 큰 영향을 미친대." (병원에서도 쓰는 방법!)</li>
+                </ul>
+                <p>그러니까, '진짜 일어난 일'과 '내 머릿속 생각'을 구분하는 건 마음 건강을 위한 아주 중요한 기술이에요!</p>
+            </div>
+            <div class="u-margin-bottom-lg">
+                <h2>📹 사실 vs. 💭 해석, 쉽게 구분하는 법!</h2>
+                <p><strong>'사실'이란?</strong> (마치 CCTV에 찍히는 것처럼, 누가 봐도 "응, 그랬어" 할 수 있는 것)</p>
+                <ul>
+                    <li>눈에 보이거나 귀에 들리는 구체적인 행동이나 말 (예: "팀장님이 회의에서 '이 프로젝트는 다음 주까지 마무리합시다'라고 말했다.")</li>
+                    <li>숫자로 표현할 수 있거나 정확히 잴 수 있는 것 (예: "고객이 3번 연속으로 전화를 받지 않았다.")</li>
+                    <li>감정이나 판단이 쏙 빠진, 건조한 정보 (예: "동료가 오늘 아침 인사를 하지 않았다.")</li>
+                </ul>
+                <p><strong>'해석'이란?</strong> (내 마음이 만들어낸 의미, 사람마다 다르게 생각할 수 있는 것)</p>
+                <ul>
+                    <li>'사실'에 대한 나의 생각, 판단, 추측, 평가 (예: "팀장님은 나를 못 믿어서 저렇게 말씀하시는 거야.")</li>
+                    <li>감정적인 반응 (예: "고객이 전화를 안 받아서 불안하다." → 불안함을 느낀 건 사실이지만, 그 이유가 '나를 피해서'라고 단정하면 해석!)</li>
+                    <li>상대방의 의도나 마음을 내 맘대로 짐작하는 것 (예: "동료가 인사를 안 한 건 나를 무시하는 게 틀림없어.")</li>
+                    <li>'항상', '절대', '맨날', '틀림없이' 같은 극단적인 말 (예: "나는 항상 실수만 해.")</li>
+                </ul>
+                 <div class="example-box">
+                    <p><strong>예시) 동료가 내 부탁을 거절했을 때</strong></p>
+                    <p><strong>사실:</strong> "동료에게 A 업무 지원을 요청했는데, 동료가 '미안하지만 지금 다른 급한 일이 있어서 어렵겠다'고 말했다."</p>
+                    <p><strong>해석 1 (부정적):</strong> "나랑 일하기 싫어서 핑계 대는 거야. 나를 도와주기 싫은 게 분명해." (속상함, 서운함)</p>
+                    <p><strong>해석 2 (중립적/긍정적):</strong> "정말 바쁜가 보다. 다른 동료에게 물어보거나, 내가 할 수 있는 방법을 찾아봐야겠다." (이해, 문제 해결 모드)</p>
+                    <p><strong>해석 3 (자기 비난적):</strong> "내가 너무 어려운 부탁을 했나? 내가 평소에 잘 못 해서 그런가?" (죄책감, 자존감 하락)</p>
+                    <p>➡️ 똑같은 '사실'이라도 어떻게 '해석'하느냐에 따라 내 기분과 다음 행동이 완전히 달라지죠?</p>
+                </div>
+            </div>
+            <div class="u-margin-bottom-lg">
+                <h2>📊 테스트 결과, 어떻게 봐야 할까요?</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr><th>점수 (정답률)</th><th>나의 상태</th><th>한 줄 조언 (토닥토닥)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>15-20점 (75-100%)</td><td>🟢 프로 소통러</td><td>"와우! 직장 생활 만렙! 지금처럼만 하시면 돼요! 👍"</td></tr>
+                            <tr><td>10-14점 (50-74%)</td><td>🟠 맑다가도 흐림</td><td>"괜찮아요! 가끔 감정의 안개가 낄 뿐, 조금만 연습하면 맑아져요! 😊"</td></tr>
+                            <tr><td>0-9점 (0-49%)</td><td>🔴 마음 안경 도수 조절</td><td>"혼자 너무 애쓰지 마세요! 작은 연습부터 시작하면 분명 달라져요! 🤗"</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="u-margin-bottom-lg">
+                <h2>🎭 직장에서 자주 만나는 '해석 함정' 피하기!</h2>
+                <p>상사나 동료, 고객이 이런 말을 할 때, '이게 진짜 사실일까, 아니면 저 사람의 해석(또는 나를 힘들게 하려는 의도)일까?' 하고 잠깐 멈춰 생각해보세요:</p>
+                <ul>
+                    <li><strong>"김 대리, 일 처리가 너무 느린 거 아니야?"</strong> (사실: 특정 업무 처리 시간이 기대보다 길었음 / 그의 해석: 김 대리는 원래 일 처리가 느림 → 혹시 내가 모르는 다른 이유가 있었을 수도?)</li>
+                    <li><strong>"이건 상식 아니에요?" (고객이 화내며)</strong> (사실: 고객이 특정 정보를 모르고 있음 / 그의 해석: 이건 누구나 아는 상식임 → 고객 입장에선 답답할 수 있지만, 내가 모르는 게 당연할 수도!)</li>
+                    <li><strong>"너는 항상 그런 식으로 문제를 일으키더라."</strong> (사실: 과거에 비슷한 실수를 몇 번 함 / 그의 해석: 너는 변하지 않는 문제아임 → 과도한 일반화! 사람은 변하고 성장할 수 있음!)</li>
+                    <li><strong>"다른 팀원들은 다 괜찮다고 하던데?"</strong> (사실: 그가 그렇게 말함 / 그의 해석: 모두가 동의하는 객관적 사실임 → 정말 모두에게 확인한 걸까? 내 의견도 중요함!)</li>
+                </ul>
+                <p>이런 말들에 바로 <span class="strong-text">'네, 제가 잘못했습니다'</span> 하거나 <span class="strong-text">'왜 나한테만 그래요!'</span> 하고 감정적으로 반응하기 전에, <span class="highlight">'잠깐! 이건 사실일까, 해석일까?'</span> 필터를 한번 돌려보세요!</p>
+            </div>
+            <div class="u-margin-bottom-lg">
+                <p style="text-align: center; font-weight: var(--font-weight-medium); color: var(--color-primary-dark);">이 테스트가 여러분의 직장 생활에 작은 '쉼표'와 '느낌표'를 선물하길 바랍니다! 💚</p>
+                <blockquote style="border-left: 4px solid var(--color-accent-light); padding: var(--space-md); background-color: var(--color-accent-lighter); border-radius: var(--border-radius-sm); text-align:center;">
+                    <p>💬 <strong>"상황은 바꿀 수 없어도, 내 생각은 내가 선택할 수 있어요!"</strong></p>
+                </blockquote>
+            </div>
+            <div class="comp-privacy-notice" style="background: transparent; border: none; padding: 0;">
+                이 테스트의 모든 응답과 결과는 여러분의 기기에만 저장돼요. 안심하고 자신을 돌아보는 시간을 가져보세요.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const allQuestionsData = [
+       // 외모/개인사 추측
+        { id: 1, text: `새로 온 동료는 팔에 문신이 있다. 그는 과거에 소위 '노는' 사람이었을 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'문신이 있다'는 것은 사실이지만, 과거를 단정하는 것은 개인의 추측, 즉 해석입니다. 문신은 개인의 취향, 신념, 예술적 표현 등 다양한 이유로 할 수 있습니다.` },
+        { id: 2, text: `박 과장님은 매일 다른 명품 가방을 들고 다닌다. 분명 집안이 아주 부유할 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'매일 다른 명품 가방을 든다'는 것은 사실(또는 그렇게 보임)일 수 있지만, '집안이 부유할 것'이라는 결론은 해석입니다. 중고품을 애용하거나, 선물을 받았거나, 다른 이유가 있을 수 있습니다.` },
+        { id: 3, text: `김 대리는 항상 칼퇴근을 한다. 회사나 업무에 대한 애정이 없는 것이 틀림없다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'항상 칼퇴근한다'는 관찰된 행동(사실)일 수 있지만, 그것이 '애정이 없다'는 증거는 아닙니다. 시간 관리를 잘하거나, 퇴근 후 다른 중요한 일정이 있을 수 있습니다.` },
+        { id: 4, text: `최 사원은 오늘 평소와 달리 캐주얼 복장으로 출근했고, 오후 반차를 냈다. 분명 다른 회사 면접을 보러 가는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'캐주얼 복장', '오후 반차'는 사실이지만, '면접 보러 간다'는 것은 당신의 추측, 즉 해석입니다. 개인적인 약속, 병원 방문 등 다른 여러 가능성이 있습니다.` },
+        { id: 5, text: `이 대리는 회의 시간에 눈에 띄게 화려한 액세서리를 하고 왔다. 관심을 받고 싶어 하는 성격인 것 같다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'화려한 액세서리를 했다'는 사실이지만, '관심받고 싶어 한다'는 성격에 대한 판단은 해석입니다. 개인의 스타일 선호일 수 있습니다.` },
+
+        // 동료 관계 및 인사
+        { id: 6, text: `오늘 아침, 팀장님과 동료 한 명이 내 인사를 받지 않고 그냥 지나갔다. 이 팀에서 나를 은근히 무시하고 있다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'인사를 받지 않았다'는 것은 사실이지만, '나를 무시한다'는 것은 당신의 해석입니다. 못 들었거나, 다른 생각에 잠겨 있었거나, 바빴을 수 있습니다.` },
+        { id: 7, text: `옆자리 동료가 오늘 나에게 단 한 마디도 먼저 말을 걸지 않았다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'먼저 말을 걸지 않았다'는 것은 하루 동안 관찰된 구체적인 행동의 부재이므로 사실로 볼 수 있습니다. 그 이유는 다양할 수 있으며, 이유를 추측하는 순간부터 해석이 됩니다.` },
+        { id: 8, text: `점심시간에 몇몇 동료들이 자기들끼리만 모여서 식사 약속을 잡는 것을 봤다. 나를 의도적으로 제외한 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'자기들끼리 약속 잡는 것을 봤다'는 사실이지만, '나를 의도적으로 제외했다'는 것은 당신의 해석입니다. 특정 메뉴를 좋아하거나, 간단히 먹고 싶었거나, 다른 이유가 있을 수 있습니다.` },
+        { id: 9, text: `회식 자리에서 부장님이 나에게만 술을 권하지 않았다. 지난번 업무 실수 때문에 나를 안 좋게 보시는 게 분명하다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'나에게만 술을 권하지 않았다'(고 느낀 것)는 사실에 가까울 수 있지만, 그 이유가 '지난번 실수 때문'이라는 것은 당신의 해석입니다. 부장님이 깜빡했거나, 다른 사람과 대화 중이었을 수 있습니다.` },
+        { id: 10, text: `신입사원이 나보다 직급이 높은 팀장님에게는 편하게 농담을 하는데, 나에게는 항상 극존칭을 쓴다. 나를 어렵게 생각하거나 불편해하는 것 같다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'팀장에게 농담, 나에게 극존칭'은 사실이지만, '나를 어렵게 생각하거나 불편해한다'는 것은 당신의 해석입니다. 예의를 갖추려는 태도이거나, 아직 당신과 충분히 가까워지지 않았다고 생각할 수 있습니다.` },
+
+        // 업무 및 평가
+        { id: 11, text: `팀장님이 내가 담당하지 않아도 될 복잡한 고객 불만 건을 나에게 처리하라고 지시했다. 이건 나를 일부러 힘들게 하려는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'복잡한 건을 처리하라고 지시했다'는 것은 사실이지만, '나를 일부러 힘들게 하려는 것'이라는 의도 파악은 해석입니다. 당신의 능력을 믿거나, 다른 사람이 바빠서일 수도 있습니다.` },
+        { id: 12, text: `이번 분기 내 개인 실적이 팀 평균보다 15% 낮게 나왔다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'개인 실적이 팀 평균보다 15% 낮다'는 것은 데이터로 확인 가능한 객관적인 사실입니다.` },
+        { id: 13, text: `상사가 내 기획안을 보더니, 별다른 말 없이 미간을 살짝 찌푸렸다. 내 기획안이 형편없다고 생각하는 게 틀림없다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'미간을 찌푸렸다'는 것은 사실이지만, '기획안이 형편없다'고 생각한다는 것은 당신의 해석입니다. 내용에 집중하거나, 다른 고민 때문일 수도 있습니다.` },
+        { id: 14, text: `팀장님이 전체 회의에서 "우리 팀은 좀 더 주인의식을 가질 필요가 있습니다"라고 말했다. 최근 내 업무 태도를 지적하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>팀장님이 '주인의식을 가져야 한다'고 말한 것은 사실이지만, 그것이 '나를 지적하는 것'이라는 판단은 해석입니다. 팀 전체에 대한 일반적인 독려일 수 있습니다.` },
+        { id: 15, text: `나와 입사 동기인 김 대리가 나보다 먼저 과장으로 승진했다. 회사는 나보다 김 대리의 능력을 더 높이 평가하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'동기가 먼저 승진했다'는 사실이지만, 그것이 '회사가 나보다 동료의 능력을 더 높이 평가한다'는 유일한 이유라고 단정하는 것은 해석입니다. 승진에는 여러 요인이 작용할 수 있습니다. (단, 이런 상황이 반복된다면 객관적 평가에 대한 의문은 가질 수 있습니다.)` },
+        { id: 16, text: `팀장님이 내 보고서에 대해 "이 부분은 데이터 근거가 부족하네요."라고 지적했다. 이건 내 보고서 전체가 잘못되었다는 뜻이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'데이터 근거가 부족하다'고 지적한 것은 사실이지만, 그것이 '보고서 전체가 잘못되었다'는 의미는 아닙니다. 특정 부분에 대한 개선 요청일 뿐, 과도한 일반화는 해석입니다.` },
+        { id: 17, text: `고객사 담당자가 어제까지 주기로 한 자료를 아직 보내주지 않았다. 우리 프로젝트를 중요하게 생각하지 않는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'자료를 아직 받지 못했다'는 사실이지만, '프로젝트를 중요하게 생각하지 않는다'는 것은 당신의 해석입니다. 담당자가 바쁘거나, 내부 사정으로 늦어지는 것일 수 있습니다.` },
+        { id: 18, text: `상사가 나에게 "이 업무는 A 방식으로 처리하는 게 더 효율적일 것 같네요."라고 말했다. 내가 지금까지 비효율적으로 일했다는 질책이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>상사가 'A 방식이 더 효율적일 것 같다'고 제안한 것은 사실이지만, 그것이 '과거 업무 방식에 대한 질책'이라고 단정하는 것은 해석입니다. 더 나은 방법을 제시하는 조언일 수 있습니다.` },
+        { id: 19, text: `내 연봉이 작년에 비해 2% 인상되었다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'연봉이 2% 인상되었다'는 것은 급여명세서 등을 통해 확인할 수 있는 객관적인 사실입니다.` },
+        { id: 20, text: `팀장님이 중요한 프로젝트 담당자를 정할 때, 나에게는 의사도 묻지 않고 다른 동료를 지목했다. 나는 이 팀에서 신뢰받지 못하고 있다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'나에게 묻지 않고 다른 동료를 지목했다'는 사실이지만, '신뢰받지 못하고 있다'는 것은 당신의 해석입니다. 해당 동료의 전문성이나 경험이 더 적합하다고 판단했을 수 있습니다.` },
+
+        // 회의 및 소통
+        { id: 21, text: `회의 중에 부장님이 내 의견을 듣고 나서, 아무런 추가 질문 없이 "네, 알겠습니다."라고만 했다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>부장님이 '네, 알겠습니다'라고 말한 것은 회의록에 기록될 수 있는 객관적인 사실입니다. 그 말의 의도나 평가는 이 문장만으로 알 수 없습니다.` },
+        { id: 22, text: `내 발표 도중에 한 동료가 스마트폰을 계속 보고 있었다. 내 발표 내용이 형편없어서 집중하지 않는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'동료가 스마트폰을 보고 있었다'는 사실이지만, '내 발표가 형편없어서'라는 이유는 당신의 해석입니다. 급한 연락을 확인하거나, 관련 정보를 검색하고 있었을 수도 있습니다.` },
+        { id: 23, text: `내가 팀 회의에서 새로운 아이디어를 제안했지만, 아무도 즉각적인 지지나 반대 의견을 내지 않고 침묵했다. 다들 내 아이디어가 별로라고 생각하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'아무도 즉각적인 반응을 보이지 않았다'는 사실이지만, '아이디어가 별로라고 생각한다'는 것은 당신의 해석입니다. 내용을 곱씹어보거나, 다른 사람의 의견을 기다리는 중일 수도 있습니다.` },
+        { id: 24, text: `과장님이 "이 업무는 긴급 사안이니, 지금 바로 처리 가능한 사람 있나요?"라고 물었다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>과장님이 특정 질문을 한 것은 객관적인 사실입니다. 이 질문에 다른 의도가 숨겨져 있다고 판단하는 것은 해석의 영역입니다.` },
+        { id: 25, text: `중요한 브리핑 시간에 상사가 눈을 감고 가만히 듣고만 있었다. 내 설명이 지루해서 졸고 있는 것이 틀림없다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'눈을 감고 듣고 있었다'는 사실이지만, '졸고 있다'는 것은 당신의 해석입니다. 깊이 생각하거나 내용에 집중하기 위해 눈을 감는 사람도 있습니다.` },
+        { id: 26, text: `고객과의 미팅에서 내가 한 농담에 고객 표정이 딱딱하게 굳었다. 내가 분위기 파악 못 하고 실수한 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'고객 표정이 굳었다'(고 느낀 것)는 사실에 가까울 수 있지만, 그것이 '내 농담 때문'이고 '내가 실수했다'고 단정하는 것은 해석입니다. 고객이 다른 생각에 잠겼거나, 원래 표정 변화가 적은 사람일 수 있습니다.` },
+        { id: 27, text: `내가 보낸 업무 메일에 동료가 답장을 하면서, 원래 내용과 관련 없는 이모티콘을 여러 개 사용했다. 내 요청을 가볍게 여기고 장난치는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'관련 없는 이모티콘을 여러 개 사용했다'는 사실이지만, '내 요청을 가볍게 여긴다'는 것은 당신의 해석입니다. 친근감을 표현하거나, 원래 그런 메일 스타일을 가졌을 수도 있습니다.` },
+        { id: 28, text: `팀 단체 카톡방에서 팀장님이 특정 업무에 대해 "A씨가 잘 알겠네요"라고 언급했다. 다른 사람들은 그 업무에 대해 무지하다고 생각하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>팀장님이 'A씨가 잘 알 것'이라고 말한 것은 사실이지만, 그것이 '다른 사람들은 무지하다'는 의미는 아닙니다. A씨가 해당 업무 담당자이거나 경험이 많다는 사실을 언급한 것일 수 있습니다.` },
+        { id: 29, text: `내가 실수로 회의 시간을 착각해서 10분 늦게 도착했다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'회의에 10분 늦었다'는 것은 객관적으로 확인할 수 있는 사실입니다. 이로 인해 다른 사람들이 어떻게 생각할지는 해석의 영역입니다.` },
+        { id: 30, text: `협력업체 담당자가 통화 중에 내 말을 자르고 "그래서 결론이 뭔가요?"라고 물었다. 나를 무시하고 빨리 통화를 끝내고 싶어 한다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'말을 자르고 결론을 물었다'는 사실이지만, '나를 무시한다'거나 '빨리 끝내고 싶어 한다'는 의도 파악은 해석입니다. 시간이 부족했거나, 핵심을 빨리 파악하고 싶었을 수 있습니다.` },
+
+        // 사내 정치 및 관계 추측
+        { id: 31, text: `부장님이 최근 김 과장하고만 점심 식사를 여러 번 같이 했다. 부장님이 김 과장을 특별히 챙기고 다음 주요 보직에 염두에 두고 있는 것이 분명하다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'여러 번 같이 식사했다'는 사실일 수 있지만, 그 이유를 '특별히 챙긴다', '주요 보직 염두' 등으로 단정하는 것은 해석입니다. 특정 프로젝트 논의, 개인적인 친분 등 다른 이유가 있을 수 있습니다.` },
+        { id: 32, text: `인사팀 직원이 오늘 내 자리로 와서 조직 개편 관련 설문지를 주고 갔다. 우리 부서에 큰 변화가 있을 것이라는 암시다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'설문지를 주고 갔다'는 사실이지만, '큰 변화가 있을 것이라는 암시'라는 것은 당신의 해석입니다. 전사적인 의견 수렴 절차일 수 있습니다.` },
+        { id: 33, text: `오늘 아침부터 임원진 회의실에서 평소보다 목소리가 크게 들리고 회의가 길어지고 있다. 분명 회사에 안 좋은 일이 생겨서 심각하게 논의 중인 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'목소리가 크고 회의가 길어진다'는 것은 사실이지만, '안 좋은 일', '심각한 논의'라는 것은 당신의 추측, 즉 해석입니다. 중요한 신규 사업이나 열띤 토론 때문일 수도 있습니다.` },
+        { id: 34, text: `팀장님이 오늘 사무실에 들어오면서부터 계속 한숨을 쉬고 인상도 굳어 있다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'한숨을 쉬고 인상이 굳어 있다'는 것은 관찰 가능한 팀장님의 행동과 표정이므로 사실입니다. 그 이유는 이 문장만으로는 알 수 없습니다.` },
+        { id: 35, text: `새로 부임한 본부장님이 이전 회사에서 대규모 인력 감축을 주도했다는 소문이 파다하다. 우리 회사도 곧 구조조정 칼바람이 불 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'소문이 파다하다'는 것은 사실일 수 있으나, 그 소문 자체의 진위 여부와 '우리 회사도 곧 구조조정'이라는 예측은 해석입니다. 과거 사례가 현재 상황에 그대로 적용되리란 보장은 없습니다.` },
+        { id: 36, text: `옆 팀 팀장이 우리 팀 팀원 중 한 명에게 다가가 어깨를 툭 치며 격려하는 모습을 봤다. 그 팀원이 곧 옆 팀으로 스카웃될 가능성이 높다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'어깨를 치며 격려하는 모습을 봤다'는 사실이지만, '스카웃될 가능성이 높다'는 것은 당신의 추측, 즉 해석입니다. 단순한 격려나 다른 사적인 대화일 수 있습니다.` },
+        { id: 37, text: `회사 익명 게시판에 '특정 부서의 업무 비효율이 심각하다'는 글이 올라왔다. 이건 분명 우리 부서를 겨냥한 글이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'익명 게시판에 글이 올라왔다'는 사실이지만, '우리 부서를 겨냥한 글'이라고 단정하는 것은 해석입니다. 다른 부서 이야기이거나, 일반적인 문제 제기일 수 있습니다.` },
+        { id: 38, text: `사장님이 최근 경쟁사 임원과 골프 회동을 했다는 기사를 봤다. 우리 회사가 경쟁사에 인수합병될지도 모른다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'골프 회동 기사를 봤다'는 사실이지만, '인수합병될지도 모른다'는 것은 과도한 비약이자 해석입니다. 단순한 업계 교류나 다른 사업 논의일 수 있습니다.` },
+        { id: 39, text: `회사 창립기념일 행사에서 내 이름이 우수사원 명단에 없었다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'내 이름이 명단에 없었다'는 것은 객관적으로 확인할 수 있는 사실입니다. 이로 인해 드는 감정이나 생각은 해석의 영역입니다.` },
+        { id: 40, text: `팀장님이 회의에서 "이번 프로젝트는 예산이 빠듯하니 다들 효율적으로 진행해야 합니다"라고 말했다. 내가 최근에 비용 처리를 많이 해서 나 들으라고 하는 말이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'예산이 빠듯하니 효율적으로 진행해야 한다'고 말한 것은 사실이지만, 그것이 '나 들으라고 하는 말'이라는 것은 당신의 해석입니다. 프로젝트 전체에 대한 일반적인 지침일 가능성이 높습니다.` },
+
+        // 개인 행동 및 성격 추측
+        { id: 41, text: `입사 동기인 박 대리는 매일 아침 가장 먼저 출근해서 사무실 청소를 한다. 상사에게 잘 보이려는 의도가 뻔하다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'매일 먼저 출근해서 청소한다'는 사실이지만, '잘 보이려는 의도'라는 판단은 해석입니다. 개인적인 성향이나 습관일 수 있습니다.` },
+        { id: 42, text: `최 사원은 회식 자리에서 항상 구석에 앉아 말이 별로 없다. 그는 사람들과 어울리는 것을 싫어하는 내향적인 사람이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'구석에 앉아 말이 별로 없다'는 사실이지만, '사람들과 어울리는 것을 싫어한다'거나 '내향적이다'라고 단정하는 것은 해석입니다. 그날 컨디션이 안 좋거나, 원래 과묵한 편일 수 있습니다.` },
+        { id: 43, text: `김 과장님은 회의 때마다 반대 의견을 자주 제시한다. 그는 매사에 부정적이고 협조적이지 않은 사람이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'반대 의견을 자주 제시한다'는 사실이지만, '부정적이고 협조적이지 않다'는 성격에 대한 평가는 해석입니다. 신중하거나 다양한 관점을 고려하는 사람일 수 있습니다.` },
+        { id: 44, text: `옆 팀 이 대리는 어려운 일이 생기면 항상 표정이 밝고 웃는다. 그는 문제를 가볍게 생각하거나 책임감이 부족한 것 같다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'어려운 일에도 표정이 밝고 웃는다'는 사실이지만, '문제를 가볍게 생각하거나 책임감이 부족하다'는 것은 당신의 해석입니다. 긍정적인 성격이거나, 팀 분위기를 위해 노력하는 것일 수 있습니다.` },
+        { id: 45, text: `신입사원이 입사 첫날부터 동료들에게 먼저 다가가 자기소개를 하고 이것저것 질문을 많이 했다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'먼저 다가가 자기소개하고 질문을 많이 했다'는 것은 관찰 가능한 신입사원의 행동이므로 사실입니다. 이를 보고 '적극적이다' 또는 '지나치다' 등으로 평가하는 것은 해석입니다.` },
+        { id: 46, text: `박 팀장님은 항상 약속 시간보다 10분 먼저 와서 기다린다. 그는 매우 꼼꼼하고 철저한 성격의 소유자다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'항상 10분 먼저 온다'는 것은 사실일 수 있지만, 그것만으로 '꼼꼼하고 철저한 성격'이라고 단정하는 것은 해석입니다. 상대방을 배려하거나, 시간 약속을 중요하게 생각하는 가치관 때문일 수 있습니다.` },
+        { id: 47, text: `내 사수인 김 선배는 내가 질문할 때마다 한숨부터 쉬고 답변해준다. 나를 가르치는 게 귀찮고 짜증 나는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'한숨부터 쉬고 답변한다'는 사실이지만, '귀찮고 짜증 난다'는 것은 당신의 해석입니다. 설명할 내용이 복잡해서이거나, 개인적인 피로감, 또는 무의식적인 습관일 수 있습니다.` },
+        { id: 48, text: `A 동료는 점심시간에 항상 혼자 샌드위치를 먹으며 책을 읽는다. 그는 다른 사람들과의 관계에는 관심이 없는 사람이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'혼자 샌드위치를 먹으며 책을 읽는다'는 사실이지만, '관계에 관심이 없다'고 단정하는 것은 해석입니다. 점심시간을 조용히 보내고 싶거나, 독서가 취미일 수 있습니다.` },
+        { id: 49, text: `B 팀원은 마감 기한이 임박해야 업무를 시작하는 경향이 있다. 그는 게으르고 계획성이 부족하다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'마감 임박해서 업무를 시작한다'는 경향(사실)은 있을 수 있지만, '게으르고 계획성이 부족하다'는 성격 판단은 해석입니다. 압박감 속에서 집중력이 높아지는 스타일일 수도 있습니다. (단, 이것이 팀에 피해를 준다면 다른 문제입니다.)` },
+        { id: 50, text: `C 과장은 회의에서 다른 사람의 의견을 들을 때 항상 팔짱을 끼고 눈을 지그시 감고 있다. 그는 상대방의 의견을 무시하거나 거만하게 행동하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'팔짱을 끼고 눈을 감고 있다'는 사실이지만, '무시하거나 거만하다'는 것은 당신의 해석입니다. 깊이 집중하거나 생각을 정리하는 그만의 방식일 수 있습니다.` },
+
+        // 갈등 유발 및 오해 심화
+        { id: 51, text: `팀 회식 다음 날, 팀장님이 나에게만 유독 쌀쌀맞게 대했다. 어제 회식자리에서 내가 뭔가 큰 실수를 한 게 분명하다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'나에게만 쌀쌀맞게 대했다'(고 느낀 것)는 사실에 가까울 수 있지만, 그 이유가 '어제 내가 실수해서'라는 것은 당신의 해석입니다. 팀장님 개인의 컨디션 문제이거나, 다른 업무 스트레스 때문일 수 있습니다.` },
+        { id: 52, text: `내가 공유한 아이디어에 대해 동료가 "그건 현실적으로 좀 어렵지 않을까요?"라고 말했다. 그는 내 아이디어를 깎아내리고 싶어 한다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'현실적으로 어렵지 않을까요?'라고 말한 것은 사실이지만, '깎아내리고 싶어 한다'는 의도 파악은 해석입니다. 진심으로 우려되는 점을 이야기한 것일 수 있습니다.` },
+        { id: 53, text: `프로젝트 마감 후, 팀장님이 기여도가 높은 동료에게만 "수고했다"고 공개적으로 칭찬했다. 내 노력은 전혀 인정받지 못한 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'특정 동료에게만 공개적으로 칭찬했다'는 사실일 수 있지만, '내 노력은 전혀 인정받지 못했다'고 단정하는 것은 해석입니다. 다른 방식으로 인정하거나, 전체 평가에 반영될 수 있습니다.` },
+        { id: 54, text: `내가 야근하는 동안, 옆 팀 팀원이 나를 보며 자기 팀원과 소곤거리고 웃었다. 내 처지를 비웃고 있는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'나를 보며 소곤거리고 웃었다'는 사실일 수 있지만, '내 처지를 비웃고 있다'는 것은 당신의 해석입니다. 전혀 다른 이야기를 하고 있었을 가능성이 높습니다.` },
+        { id: 55, text: `중요한 고객사 미팅에 팀장님이 나를 배제하고 다른 후배 직원을 데리고 갔다. 팀장님은 나를 더 이상 중요한 인력으로 생각하지 않는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'나를 배제하고 후배를 데리고 갔다'는 사실이지만, '나를 중요 인력으로 생각하지 않는다'는 것은 당신의 해석입니다. 후배에게 경험을 주기 위함이거나, 다른 전략적 판단이 있었을 수 있습니다.` },
+        { id: 56, text: `내가 작성한 보고서의 오타를 동료가 전체 메일로 지적하며 수정 요청을 보냈다. 나에게 공개적으로 망신을 주려는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'전체 메일로 오타 지적 및 수정 요청'은 사실이지만, '망신을 주려는 것'이라는 의도 파악은 해석입니다. 업무 효율성을 위해 전체 공유를 했을 수도 있고, 다른 의도는 없었을 수 있습니다. (단, 방식이 부적절했다면 별개의 문제입니다.)` },
+        { id: 57, text: `팀장이 승진자 명단 발표 후, 탈락한 나에게 와서 "너무 실망하지 말게. 다음 기회도 있으니."라고 말했다. 이건 나를 위로하는 척하면서 약 올리는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>팀장이 특정 말을 한 것은 사실이지만, '약 올리는 것'이라는 의도 해석은 당신의 부정적인 감정이 반영된 해석일 가능성이 큽니다. 진심으로 위로하려 했을 수 있습니다.` },
+        { id: 58, text: `내가 실수로 고객에게 잘못된 정보를 안내한 후, 상사가 나를 불러 "정신 똑바로 차리고 일해야지!"라고 소리쳤다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>상사가 특정 발언을 하며 소리친 것은 직접 경험한 사실입니다. 이로 인해 상사가 나를 어떻게 생각하는지에 대한 판단은 해석이 될 수 있습니다.` },
+        { id: 59, text: `동료가 내 책상 위 간식을 말없이 가져다 먹었다. 나를 완전히 무시하는 행동이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'간식을 말없이 가져다 먹었다'는 사실이지만, '나를 완전히 무시한다'는 것은 과도한 해석일 수 있습니다. 매우 친하다고 생각해서 그랬거나, 별생각 없이 행동했을 수 있습니다. (물론, 불쾌하다면 표현하는 것이 좋습니다.)` },
+        { id: 60, text: `팀 프로젝트의 성과가 부진하자, 팀장님이 회의에서 "누군가는 책임을 져야 할 겁니다"라고 말했다. 이건 명백히 나를 겨냥한 발언이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>팀장님이 '누군가는 책임을 져야 한다'고 말한 것은 사실이지만, 그것이 '명백히 나를 겨냥한 것'이라고 단정하는 것은 해석입니다. 팀 전체의 책임감 있는 자세를 촉구하는 발언일 수 있습니다.` },
+
+        // 아리송한 상황들 (일상적 오해 유발)
+        { id: 61, text: `동료가 내가 커피를 타러 간 사이에 내 컴퓨터 모니터를 한참 보고 있었다. 내 업무 내용을 몰래 훔쳐보는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'내 모니터를 보고 있었다'는 사실이지만, '훔쳐보는 것'이라는 의도 해석은 부정적입니다. 우연히 화면이 눈에 들어왔거나, 바탕화면 그림이 신기해서 봤을 수도 있습니다.` },
+        { id: 62, text: `상사가 회의실에 들어오면서 나에게만 눈인사를 하지 않았다. 나에게 뭔가 불만이 있는 게 틀림없다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'나에게만 눈인사를 하지 않았다'(고 느낀 것)는 사실에 가까울 수 있지만, '불만이 있다'는 것은 당신의 해석입니다. 우연히 타이밍이 안 맞았거나, 다른 생각에 잠겨 있었을 수 있습니다.` },
+        { id: 63, text: `내가 엘리베이터를 타려고 할 때, 같은 팀 동료가 문이 닫히려는 것을 보고도 버튼을 눌러주지 않았다. 나를 골탕 먹이려고 일부러 그런 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'버튼을 눌러주지 않았다'는 사실이지만, '골탕 먹이려고 일부러'라는 의도 해석은 과도합니다. 당신을 못 봤거나, 다른 일에 정신이 팔려 있었을 가능성이 높습니다.` },
+        { id: 64, text: `옆자리 동료가 오늘따라 유난히 키보드를 시끄럽게 두드린다. 나에게 스트레스를 풀고 있는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'키보드를 시끄럽게 두드린다'는 것은 사실이지만, '나에게 스트레스를 푼다'는 것은 당신의 해석입니다. 업무가 급하거나, 원래 타건 소리가 큰 사람일 수 있습니다.` },
+        { id: 65, text: `팀장님이 내가 제출한 휴가 신청서를 한참 동안 바라보다가 결재했다. 내 휴가가 탐탁지 않은 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'한참 바라보다 결재했다'는 사실이지만, '휴가가 탐탁지 않다'는 것은 당신의 해석입니다. 다른 업무 일정을 확인하거나, 단순히 다른 생각을 하고 있었을 수 있습니다.` },
+        { id: 66, text: `사내 메신저 단체 대화방에서 내가 올린 의견에 아무도 '좋아요'나 반응을 보이지 않았다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'아무도 반응을 보이지 않았다'는 것은 메신저 기록으로 확인할 수 있는 사실입니다. 그 이유가 무엇인지에 대한 생각은 해석입니다.` },
+        { id: 67, text: `복도에서 마주친 다른 부서 팀장이 내게 "요즘 바쁘시죠? 얼굴 보기 힘드네요"라고 말했다. 우리 부서가 한가하다고 비꼬는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>팀장이 특정 말을 한 것은 사실이지만, '비꼬는 것'이라는 의도 파악은 당신의 해석입니다. 단순한 안부 인사나 오랜만에 봐서 반가움의 표현일 수 있습니다.` },
+        { id: 68, text: `내가 실수로 커피를 쏟았을 때, 근처에 있던 동료가 도와주지 않고 못 본 척했다. 그는 이기적이고 배려심이 없는 사람이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'도와주지 않고 못 본 척했다'(고 느낀 것)는 사실에 가까울 수 있지만, '이기적이고 배려심이 없다'는 성격 판단은 해석입니다. 정말 못 봤거나, 당황해서 어떻게 해야 할지 몰랐을 수도 있습니다.` },
+        { id: 69, text: `팀장님이 "A 프로젝트는 B씨에게 맡기는 게 좋겠군요."라고 말했다. 나보다 B씨의 능력을 더 높이 평가하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>팀장님이 특정 업무를 B씨에게 맡긴 것은 사실이지만, 그것이 반드시 '나보다 B씨의 능력을 더 높이 평가해서'라고 단정하는 것은 해석입니다. B씨의 현재 업무량, 전문 분야, 경험 등을 고려한 결정일 수 있습니다.` },
+        { id: 70, text: `회의 중 내 휴대폰 벨소리가 실수로 울렸다. 동료들이 나를 한심하게 쳐다봤다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'휴대폰 벨소리가 울렸다'는 사실이지만, '동료들이 나를 한심하게 쳐다봤다'는 것은 당신의 주관적인 느낌이자 해석입니다. 단순히 소리가 난 쪽을 쳐다본 것일 수 있습니다.` },
+        { id: 71, text: `상사가 내 자리로 와서 "이거 오늘까지 가능하죠?"라고 물었다. 가능하지 않으면 무능하다고 생각할까 봐 압박하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>상사가 '오늘까지 가능하죠?'라고 물은 것은 사실이지만, '무능하다고 생각할까 봐 압박한다'는 것은 당신의 불안감이 섞인 해석입니다. 단순히 마감일을 확인하려는 질문일 수 있습니다.` },
+        { id: 72, text: `내가 공들여 만든 PPT 자료를 보고 팀장님이 "글씨 크기가 너무 작네요."라고 지적했다. 내 PPT 전체가 엉망이라는 뜻이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'글씨 크기가 작다'고 지적한 것은 사실이지만, 'PPT 전체가 엉망'이라는 것은 과도한 일반화이자 부정적 해석입니다. 가독성에 대한 구체적인 피드백일 뿐입니다.` },
+        { id: 73, text: `점심시간에 구내식당에서 마주친 타 부서 동료가 나를 보고도 아는 척하지 않고 지나갔다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'아는 척하지 않고 지나갔다'는 것은 관찰된 행동이므로 사실입니다. 그가 당신을 실제로 못 봤거나, 다른 생각에 빠져 있었거나, 여러 이유가 있을 수 있습니다.` },
+        { id: 74, text: `팀 단체 메일에서 누군가 나를 참조(CC)에서 누락시켰다. 나를 업무에서 배제하려는 의도다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'참조에서 누락되었다'는 사실이지만, '배제하려는 의도'라는 것은 당신의 해석입니다. 단순한 실수일 가능성이 매우 높습니다.` },
+        { id: 75, text: `상사가 내 의견을 듣고 난 후, 몇 초간 아무 말 없이 나를 쳐다봤다. 내 의견에 뭔가 큰 문제가 있다고 생각하는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'몇 초간 말없이 쳐다봤다'는 사실이지만, '의견에 큰 문제가 있다'고 생각한다는 것은 당신의 해석입니다. 내용을 신중하게 생각하거나, 다음 할 말을 고르고 있었을 수 있습니다.` },
+        { id: 76, text: `협력업체 담당자가 미팅 시간에 5분 늦게 도착했다. 우리 회사를 중요하게 생각하지 않는 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'5분 늦게 도착했다'는 사실이지만, '중요하게 생각하지 않는다'는 것은 당신의 해석입니다. 교통 체증이나 예상치 못한 다른 사정이 있었을 수 있습니다.` },
+        { id: 77, text: `회의에서 내 제안에 대해 팀장님이 "그건 좀 더 고민해봅시다."라고 말했다. 내 제안을 에둘러 거절한 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'좀 더 고민해보자'고 말한 것은 사실이지만, '거절한 것'이라고 단정하는 것은 해석입니다. 말 그대로 추가적인 검토나 논의가 필요하다는 의미일 수 있습니다.` },
+        { id: 78, text: `오늘 아침 출근길에 본부장님 차가 내 차 앞으로 끼어들기를 했다.`, correctAnswer: "O", explanation: `<strong>정답: O (사실)</strong><br/>'본부장님 차가 끼어들기를 했다'는 것은 관찰된 객관적인 사실입니다. 그 의도나 본부장님이 당신을 인지했는지 여부는 이 문장만으로 알 수 없습니다.` },
+        { id: 79, text: `내가 속한 팀의 올해 성과 목표치가 작년보다 20% 상향 조정되었다. 회사가 우리 팀을 과도하게 압박하고 있다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'성과 목표치가 20% 상향 조정되었다'는 사실이지만, '과도하게 압박한다'는 것은 주관적인 판단이자 해석입니다. 회사의 성장 전략이나 시장 상황을 반영한 목표일 수 있습니다.` },
+        { id: 80, text: `동료가 내가 빌려 간 책을 돌려주면서 책의 특정 페이지 모서리를 접어 놓았다. 내가 아끼는 책인데 일부러 함부로 다룬 것이다.`, correctAnswer: "X", explanation: `<strong>정답: X (해석)</strong><br/>'페이지 모서리를 접어 놓았다'는 사실이지만, '일부러 함부로 다룬 것'이라는 의도 파악은 해석입니다. 실수로 접혔거나, 중요한 부분을 표시하려 했을 수 있습니다. (물론, 기분 나쁠 수는 있습니다.)` }
+    ];
+
+
+
+    let questionsData = [];
+    const questionsPerTest = 20; // 한 번 테스트 시 보여줄 질문 수
+    let currentStepIndex = 0; 
+
+    const elements = {
+        pageHeader: document.getElementById('pageHeader'),
+        stickyStepsIndicatorWrapper: document.getElementById('stickyStepsIndicatorWrapper'),
+        stepIndicators: document.querySelectorAll('.steps-indicator .step'),
+        introCard: document.getElementById('intro-card'),
+        questionCard: document.getElementById('question-card'),
+        questionArea: document.getElementById('question-area'),
+        resultCardOverall: document.getElementById('result-card-overall'),
+        startBtn: document.getElementById('start-btn'),
+        navigationButtonsContainer: document.getElementById('navigation-buttons-container'),
+        prevBtn: document.getElementById('prev-btn'),
+        nextBtn: document.getElementById('next-btn'),
+        progressBar: document.getElementById('progress-bar'),
+        progressText: document.getElementById('progress-text'),
+        progressContainer: document.getElementById('progress-container'),
+        resultContainer: document.getElementById('result-container'),
+        restartBtn: document.getElementById('restart-btn'),
+        learnMoreBtn: document.getElementById('learn-more-btn'),
+        modalOverlay: document.getElementById('modal-overlay'),
+        modalClose: document.getElementById('modal-close'),
+        toastNotification: document.getElementById('toast-notification'),
+        saveImageBtn: document.getElementById('save-image-btn'),
+        copyLinkBtn: document.getElementById('copy-link-btn'),
+        resultGood: document.getElementById('result-good'),
+        resultModerate: document.getElementById('result-moderate'),
+        resultDanger: document.getElementById('result-danger'),
+        goodPercentage: document.getElementById('good-percentage'),
+        moderatePercentage: document.getElementById('moderate-percentage'),
+        dangerPercentage: document.getElementById('danger-percentage'),
+        goodScoreText: document.getElementById('good-score-text'),
+        moderateScoreText: document.getElementById('moderate-score-text'),
+        dangerScoreText: document.getElementById('danger-score-text'),
+        resultItemsContainer: document.getElementById('result-items-container'),
+        reflectionInput: document.getElementById('reflection-input')
+    };
+
+    let currentQuestionIndex = 0;
+    let userAnswers = {}; 
+    let scrollTimeout;
+    let previousActiveElement = null;
+    let transitionDurationValue = 0.25; 
+
+    function init() {
+        const rootStyle = getComputedStyle(document.documentElement);
+        transitionDurationValue = parseFloat(rootStyle.getPropertyValue('--transition-duration')) || 0.25;
+
+        bindEventListeners();
+        updateStepIndicatorUI(0);
+        gsap.fromTo(elements.introCard, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out", delay: 0.2 });
+        window.addEventListener('scroll', handleScrollThrottled);
+        handleScroll();
+    }
+
+    function handleScrollThrottled() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(handleScroll, 50);
+    }
+
+    function handleScroll() {
+        if (!elements.stickyStepsIndicatorWrapper || !elements.pageHeader) return;
+        const scrollThreshold = elements.pageHeader.offsetHeight;
+        const currentScrollY = window.pageYOffset;
+
+        if (currentScrollY > scrollThreshold && elements.stickyStepsIndicatorWrapper.classList.contains('visible')) {
+            if (!document.body.classList.contains('fixed-header-active')) {
+                 document.body.classList.add('fixed-header-active');
+            }
+        } else {
+            if (document.body.classList.contains('fixed-header-active')) {
+                document.body.classList.remove('fixed-header-active');
+            }
+        }
+    }
+
+    function updateStepIndicatorUI(activeIndex) {
+        currentStepIndex = activeIndex;
+        elements.stepIndicators.forEach((stepEl, i) => {
+            stepEl.classList.remove('active', 'completed');
+            if (i < activeIndex) {
+                stepEl.classList.add('completed');
+            } else if (i === activeIndex) {
+                stepEl.classList.add('active');
+            }
+        });
+        if (activeIndex > 0) {
+            elements.stickyStepsIndicatorWrapper.classList.add('visible');
+        } else {
+            elements.stickyStepsIndicatorWrapper.classList.remove('visible');
+            document.body.classList.remove('fixed-header-active');
+        }
+        handleScroll();
+    }
+
+    function bindEventListeners() {
+        elements.startBtn.addEventListener('click', startTest);
+        elements.prevBtn.addEventListener('click', showPrevQuestion);
+        elements.nextBtn.addEventListener('click', handleNextButtonClick);
+        elements.restartBtn.addEventListener('click', () => {
+            gsap.to([elements.resultCardOverall, elements.introCard, elements.questionCard, elements.progressContainer, elements.navigationButtonsContainer], {
+                opacity: 0, y: 20, duration: 0.3, ease: "power1.in",
+                onComplete: () => location.reload() 
+            });
+        });
+        elements.learnMoreBtn.addEventListener('click', showModal);
+        elements.modalClose.addEventListener('click', hideModal);
+        elements.modalOverlay.addEventListener('click', (e) => { if (e.target === elements.modalOverlay) hideModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && elements.modalOverlay.classList.contains('is-active')) hideModal(); });
+        elements.saveImageBtn.addEventListener('click', saveResultAsImage);
+        elements.copyLinkBtn.addEventListener('click', copyShareLink);
+    }
+
+    function startTest() {
+        const shuffledAll = [...allQuestionsData].sort(() => 0.5 - Math.random());
+        questionsData = shuffledAll.slice(0, questionsPerTest); // 전체 풀에서 20개만 선택
+
+        currentQuestionIndex = 0;
+        userAnswers = {};
+
+        gsap.to(elements.introCard, {
+            opacity: 0, y: -20, duration: 0.4, ease: "power1.in",
+            onComplete: () => {
+                elements.introCard.style.display = 'none';
+                elements.introCard.classList.remove('visible');
+                elements.questionCard.style.display = 'block';
+                elements.progressContainer.style.display = 'block';
+                elements.navigationButtonsContainer.style.display = 'flex';
+                gsap.fromTo([elements.questionCard, elements.progressContainer, elements.navigationButtonsContainer],
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.1 }
+                );
+                renderQuestion(currentQuestionIndex);
+                updateProgress();
+                updateStepIndicatorUI(1);
+            }
+        });
+    }
+
+    function renderQuestion(index) {
+        const questionData = questionsData[index];
+        elements.questionArea.innerHTML = `
+            <div class="mol-question-item is-active" id="q-idx-${index}">
+                <div class="mol-question-item__header">
+                    <div class="atm-question-number">${index + 1}</div>
+                    <h3 class="mol-question-item__title">${questionData.text}</h3>
+                </div>
+                <p>이 문장은 <strong><i class="fas fa-video"></i> CCTV에 찍힐 '사실'</strong>일까요, 아니면 <strong><i class="fas fa-brain"></i> 내 머릿속 '생각(해석)'</strong>일까요?</p>
+                <div class="mol-option-group">
+                    <div class="mol-option-group__item">
+                        <input id="q-idx-${index}-o" name="q-idx-${index}" type="radio" value="O" ${userAnswers[questionData.id] === 'O' ? 'checked' : ''}/>
+                        <label class="atm-option-label" for="q-idx-${index}-o">
+                            <span class="atm-option-emoji">📹</span>
+                            <span class="atm-option-label__description">사실이다!</span>
+                        </label>
+                    </div>
+                    <div class="mol-option-group__item">
+                        <input id="q-idx-${index}-x" name="q-idx-${index}" type="radio" value="X" ${userAnswers[questionData.id] === 'X' ? 'checked' : ''}/>
+                        <label class="atm-option-label" for="q-idx-${index}-x">
+                            <span class="atm-option-emoji">🧠</span>
+                            <span class="atm-option-label__description">나의 해석이다!</span>
+                        </label>
+                    </div>
+                </div>
+            </div>`;
+
+        const questionItem = elements.questionArea.querySelector('.mol-question-item');
+        if (questionItem) {
+             gsap.set(questionItem, { opacity: 0, y: 20 });
+             gsap.to(questionItem, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
+        }
+
+        document.querySelectorAll(`input[name="q-idx-${index}"]`).forEach(radio => {
+            radio.addEventListener('change', handleAnswerSelection);
+        });
+        updateNavigationButtons();
+        if (elements.questionCard.offsetParent !== null) { 
+            elements.questionCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    function handleAnswerSelection(event) {
+        const questionId = questionsData[currentQuestionIndex].id;
+        userAnswers[questionId] = event.target.value;
+        updateNavigationButtons();
+
+        if ((currentQuestionIndex + 1) % 5 === 0 && currentQuestionIndex < questionsData.length -1) {
+            const encouragements = ["잘하고 있어요!", "거의 다 왔어요!", "정답에 가까워지고 있어요!", "훌륭해요!"];
+            showToast(encouragements[Math.floor(Math.random() * encouragements.length)], false, 'is-success');
+        }
+
+        setTimeout(() => {
+            if (userAnswers[questionsData[currentQuestionIndex].id]) {
+                 if (currentQuestionIndex < questionsData.length - 1) {
+                    gsap.to(elements.questionArea.querySelector('.mol-question-item'), {
+                        opacity: 0, y: -10, duration: 0.3, ease: "power1.in",
+                        onComplete: () => {
+                            currentQuestionIndex++;
+                            renderQuestion(currentQuestionIndex);
+                            updateProgress();
+                        }
+                    });
+                } else {
+                    updateNavigationButtons();
+                }
+            }
+        }, 300); 
+    }
+
+    function handleNextButtonClick() {
+        const isLastQuestion = currentQuestionIndex === questionsData.length - 1;
+        if (isLastQuestion) {
+            const currentQuestionId = questionsData[currentQuestionIndex].id;
+            if (userAnswers[currentQuestionId]) {
+                displayResults();
+            } else {
+                showToast('마지막 질문에 답변해주세요!', true);
+            }
+        }
+    }
+
+    function updateProgress() {
+        const percentage = ((currentQuestionIndex + 1) / questionsData.length) * 100;
+        elements.progressBar.style.width = percentage + '%';
+        elements.progressText.textContent = `${currentQuestionIndex + 1}/${questionsData.length}`;
+        elements.progressText.setAttribute('aria-valuenow', currentQuestionIndex + 1);
+        elements.progressText.setAttribute('aria-valuemax', questionsData.length);
+    }
+
+    function updateNavigationButtons() {
+        const isFirstQuestion = currentQuestionIndex === 0;
+        const isLastQuestion = currentQuestionIndex === questionsData.length - 1;
+
+        elements.prevBtn.disabled = isFirstQuestion;
+        elements.prevBtn.style.display = isFirstQuestion ? 'none' : 'inline-flex';
+
+        const currentQuestionId = questionsData[currentQuestionIndex].id;
+        const isAnswerSelected = !!userAnswers[currentQuestionId];
+
+        if (isLastQuestion) {
+            elements.nextBtn.innerHTML = '결과 보기 <i class="fas fa-check-circle icon icon-after"></i>'; 
+            elements.nextBtn.style.display = 'inline-flex';
+            elements.nextBtn.disabled = !isAnswerSelected;
+        } else {
+            elements.nextBtn.innerHTML = '다음 <i class="fas fa-arrow-right icon icon-after"></i>';
+            elements.nextBtn.style.display = 'none'; 
+            elements.nextBtn.disabled = true;
+        }
+        elements.nextBtn.classList.toggle('is-disabled', elements.nextBtn.disabled);
+
+        const navContainer = elements.navigationButtonsContainer;
+        navContainer.classList.remove('justify-start', 'justify-end', 'justify-center', 'justify-between');
+
+        const prevVisible = elements.prevBtn.style.display !== 'none';
+        const nextVisible = elements.nextBtn.style.display !== 'none';
+
+        if (prevVisible && nextVisible) { navContainer.classList.add('justify-between'); }
+        else if (prevVisible && !nextVisible) { navContainer.classList.add('justify-start'); }
+        else if (!prevVisible && nextVisible) { navContainer.classList.add('justify-end'); }
+        else { navContainer.classList.add('justify-center'); } 
+    }
+
+    function showPrevQuestion() {
+        if (currentQuestionIndex > 0) {
+            gsap.to(elements.questionArea.querySelector('.mol-question-item'), {
+                opacity: 0, y: 10, duration: 0.3, ease: "power1.in",
+                onComplete: () => {
+                    currentQuestionIndex--;
+                    renderQuestion(currentQuestionIndex);
+                    updateProgress();
+                }
+            });
+        }
+    }
+
+    function displayResults() {
+        let correctCount = 0;
+        questionsData.forEach(q => {
+            if (userAnswers[q.id] === q.correctAnswer) {
+                correctCount++;
+            }
+        });
+
+        gsap.to([elements.questionCard, elements.progressContainer, elements.navigationButtonsContainer], {
+            opacity: 0, y: -20, duration: 0.4, ease: "power1.in", stagger: 0.1,
+            onComplete: () => {
+                elements.questionCard.style.display = 'none';
+                elements.progressContainer.style.display = 'none';
+                elements.navigationButtonsContainer.style.display = 'none';
+
+                elements.resultCardOverall.style.display = 'block';
+                elements.resultCardOverall.classList.add('visible');
+                elements.resultContainer.style.display = 'block';
+
+                gsap.fromTo(elements.resultCardOverall,
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+                );
+
+                elements.resultGood.style.display = 'none';
+                elements.resultModerate.style.display = 'none';
+                elements.resultDanger.style.display = 'none';
+
+                const scorePercentage = Math.round((correctCount / questionsData.length) * 100);
+                const scoreText = `정답: ${correctCount} / ${questionsData.length}개`;
+
+                let resultSummaryElement;
+                if (scorePercentage >= 75) {
+                    resultSummaryElement = elements.resultGood;
+                    elements.goodPercentage.textContent = `${scorePercentage}%`;
+                    elements.goodScoreText.textContent = scoreText;
+                } else if (scorePercentage >= 50) {
+                    resultSummaryElement = elements.resultModerate;
+                    elements.moderatePercentage.textContent = `${scorePercentage}%`;
+                    elements.moderateScoreText.textContent = scoreText;
+                } else {
+                    resultSummaryElement = elements.resultDanger;
+                    elements.dangerPercentage.textContent = `${scorePercentage}%`;
+                    elements.dangerScoreText.textContent = scoreText;
+                }
+                resultSummaryElement.style.display = 'block';
+                gsap.fromTo(resultSummaryElement, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)", delay: 0.3 });
+
+                generateResultItems();
+                elements.reflectionInput.value = ''; 
+                const headerHeight = elements.stickyStepsIndicatorWrapper.offsetHeight || 0;
+                const scrollToPosition = elements.resultCardOverall.offsetTop - headerHeight - 20; 
+                window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+                updateStepIndicatorUI(2);
+            }
+        });
+    }
+
+    function generateResultItems() {
+        elements.resultItemsContainer.innerHTML = '';
+        questionsData.forEach((qData, index) => {
+            const userAnswer = userAnswers[qData.id];
+            const isCorrect = userAnswer === qData.correctAnswer;
+            const resultItemDiv = document.createElement('div');
+            resultItemDiv.className = 'org-result-details__item';
+            resultItemDiv.innerHTML = `
+                <div class="org-result-details__title">${index + 1}. ${qData.text}</div>
+                <div class="org-result-details__answer-row">
+                    <div class="atm-answer-info">나의 선택: <strong>${userAnswer ? (userAnswer === 'O' ? '사실' : '해석') : '미응답'}</strong></div>
+                    <div class="atm-answer-info">정답: ${qData.correctAnswer === 'O' ? '사실' : '해석'}</div>
+                    <span class="atm-answer-badge ${isCorrect ? 'atm-answer-badge--correct' : 'atm-answer-badge--incorrect'}">
+                        ${isCorrect ? '정답 <i class="fas fa-check-circle"></i>' : '오답 <i class="fas fa-times-circle"></i>'}
+                    </span>
+                </div>
+                <div class="org-result-details__explanation">${qData.explanation}</div>
+            `;
+            elements.resultItemsContainer.appendChild(resultItemDiv);
+            gsap.fromTo(resultItemDiv, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, ease: "power2.out", delay: index * 0.05 + 0.5 });
+        });
+    }
+
+    function showModal() {
+        previousActiveElement = document.activeElement;
+        elements.modalOverlay.style.display = 'flex';
+        gsap.to(elements.modalOverlay, { opacity: 1, duration: transitionDurationValue });
+        gsap.to(elements.modalOverlay.querySelector('.mol-modal-container'), {
+            opacity: 1, scale: 1, y: 0, duration: transitionDurationValue, ease: "power2.out"
+        });
+        elements.modalOverlay.classList.add('is-active');
+        document.body.style.overflow = 'hidden'; 
+        elements.modalOverlay.querySelector('.atm-modal-close-button').focus(); 
+
+        if (window.innerWidth <= 768 && elements.navigationButtonsContainer.style.position === 'fixed') {
+            elements.navigationButtonsContainer.style.display = 'none';
+        }
+    }
+
+    function hideModal() {
+        gsap.to(elements.modalOverlay.querySelector('.mol-modal-container'), {
+            opacity: 0, scale: 0.95, y: -20, duration: transitionDurationValue, ease: "power1.in"
+        });
+        gsap.to(elements.modalOverlay, {
+            opacity: 0, duration: transitionDurationValue,
+            onComplete: () => {
+                elements.modalOverlay.style.display = 'none';
+                elements.modalOverlay.classList.remove('is-active');
+                if (previousActiveElement) previousActiveElement.focus(); 
+            }
+        });
+        document.body.style.overflow = ''; 
+
+        if (window.innerWidth <= 768 && elements.questionCard.style.display === 'block' && elements.navigationButtonsContainer.style.position === 'fixed') {
+             elements.navigationButtonsContainer.style.display = 'flex';
+        }
+    }
+
+    let toastTimer;
+    function showToast(message, isError = false, typeClass = '') {
+        clearTimeout(toastTimer);
+        elements.toastNotification.textContent = message;
+        elements.toastNotification.className = 'atm-toast-notification'; 
+        elements.toastNotification.style.backgroundColor = ''; 
+
+        if (isError) {
+            elements.toastNotification.classList.add('is-error');
+        } else if (typeClass) {
+            elements.toastNotification.classList.add(typeClass);
+        }
+        elements.toastNotification.classList.add('is-active');
+
+        toastTimer = setTimeout(() => {
+            elements.toastNotification.classList.remove('is-active');
+        }, 3000);
+    }
+
+    function saveResultAsImage() {
+        showToast('🔄 결과 이미지를 만들고 있어요... 잠시만 기다려주세요!');
+        const resultArea = document.getElementById('result-capture-area');
+
+        const shareButtons = resultArea.querySelector('.mol-share-buttons');
+        const restartButton = resultArea.querySelector('#restart-btn'); 
+        const disclaimerText = resultArea.querySelector('p[style*="text-align:center; color: var(--color-text-light)"]');
+
+        const originalVisibilities = new Map();
+        [shareButtons, restartButton, disclaimerText].forEach(el => {
+            if (el) {
+                originalVisibilities.set(el, el.style.visibility);
+                el.style.visibility = 'hidden';
+            }
+        });
+
+        resultArea.classList.add('is-capturing'); 
+
+        html2canvas(resultArea, {
+            scale: window.devicePixelRatio > 1 ? window.devicePixelRatio : 2, 
+            useCORS: true,
+            allowTaint: true,
+            backgroundColor: getComputedStyle(document.body).getPropertyValue('--color-background').trim(), 
+             onclone: (clonedDoc) => { 
+                const reflectionTextarea = clonedDoc.getElementById('reflection-input');
+                if (reflectionTextarea) {
+                    const reflectionValue = reflectionTextarea.value.trim();
+                    const reflectionAreaDiv = clonedDoc.querySelector('.reflection-area'); 
+
+                    if (reflectionValue !== '') {
+                        const p = clonedDoc.createElement('div');
+                        p.style.whiteSpace = 'pre-wrap'; 
+                        p.style.border = '1px solid ' + getComputedStyle(reflectionTextarea).borderColor;
+                        p.style.padding = getComputedStyle(reflectionTextarea).padding;
+                        p.style.backgroundColor = getComputedStyle(reflectionTextarea).backgroundColor || 'var(--color-surface)';
+                        p.style.borderRadius = getComputedStyle(reflectionTextarea).borderRadius;
+                        p.style.fontFamily = getComputedStyle(reflectionTextarea).fontFamily;
+                        p.style.fontSize = getComputedStyle(reflectionTextarea).fontSize;
+                        p.style.color = getComputedStyle(reflectionTextarea).color;
+                        p.style.lineHeight = getComputedStyle(reflectionTextarea).lineHeight;
+                        p.style.marginTop = getComputedStyle(clonedDoc.querySelector('.reflection-area label')).marginBottom; 
+                        p.textContent = reflectionValue;
+
+                        if (reflectionAreaDiv) {
+                           reflectionAreaDiv.appendChild(p); 
+                        }
+                    }
+                    reflectionTextarea.style.display = 'none';
+                    const label = reflectionAreaDiv.querySelector('label[for="reflection-input"]');
+                    if(label) label.style.display = 'none';
+                    const helpText = reflectionAreaDiv.querySelector('.help-text');
+                    if(helpText) helpText.style.display = 'none';
+                }
+            }
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = '나의_직장소통스타일_결과.png'; 
+            link.href = canvas.toDataURL("image/png", 1.0); 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast('✅ 결과 이미지가 저장되었어요!', false, 'is-success');
+        }).catch(err => {
+            console.error('html2canvas error:', err);
+            showToast('⚠️ 이미지 저장 중 문제가 생겼어요. 스크린샷을 이용해주세요.', true);
+        }).finally(() => {
+            originalVisibilities.forEach((visibility, el) => {
+                if (el) el.style.visibility = visibility;
+            });
+            resultArea.classList.remove('is-capturing'); 
+        });
+    }
+
+
+    function copyShareLink() {
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = window.location.href; 
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        try {
+            document.execCommand('copy'); 
+            showToast('🔗 테스트 링크가 복사되었어요! 동료들과 함께 해보세요.', false, 'is-success');
+        } catch (err) {
+            console.error('Link copy failed:', err);
+            showToast('⚠️ 링크 복사에 실패했어요. 직접 복사해주세요.', true);
+        }
+        document.body.removeChild(tempTextArea);
+    }
+
+    init(); 
+});
+</script>
+</body>
+</html>
